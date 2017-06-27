@@ -1,0 +1,5 @@
+var db = [];
+
+    function db() {
+    
+    }
