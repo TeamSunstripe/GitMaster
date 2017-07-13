@@ -13,7 +13,20 @@
         </header>
         <!-- contents start -->
         <div id="contents">
-
+            <h1>featureブランチ</h1>（必須）
+            
+            <h3>命名規則</h3>
+            <h3>feature/[派生元バージョン番号]/[機能名]</h3>
+            中〜大規模な機能追加・改修などを行う作業ブランチ
+            <div>
+            開発をする際に<a href="/develop.html">developブランチ</a>から、<a href="/feature.html">featureブランチ</a>を切る<br />
+            完了後は、<a href="/develop.html">developブランチ</a>にマージされて、<a href="/feature.html">featureブランチ</a>は削除される<br />
+            規模の機能追加・改修などを行う作業ブランチです。<br />
+            機能追加の紆余曲折を大事にして、このブランチにコミットログを残していくことになりますが、機能追加の只中であるときはどうしても、およそ完全でないバージョンをコミットしていまうことも少なくありません。<br />
+            <br />
+            <a href="/feature.html">featureブランチ</a>を切っておけば、<a href="/develop.html">developブランチ</a>を共有する他の開発者などに迷惑をかけることもないので、Gitの特性上、ブランチさえ切ってしまえばある程度手元で柔軟に対応することができます。<br />
+            <br />
+            この開発ブランチは、役割の都合上、個人で完結するような機能追加であればローカルブランチとして作られて、そのまま手元でdevelopブランチによってmerge -> pushという流れになり、<a href="/feature.html">featureブランチ</a>そのものがpushされないケースも多いでしょう。反対に、他の開発者とリモート越しに共有したい機能追加の作業であれば、リモートにpushさえすれば済む話です。<br />
         </div>
         
         <!-- contents end -->
