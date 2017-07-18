@@ -2,6 +2,8 @@
 
 release 1.0.0
 + index.html
++ basic.html
+ + basicStart.html
 + expansion.html
  + branch.html
   + Git Flow(gitFlow.html)
@@ -10,3 +12,6 @@ release 1.0.0
    + release.html
    + feature.html
    + hotfix.html
++ reference.html
++ CHANGE.LOG
++ README.md
