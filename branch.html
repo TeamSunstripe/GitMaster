@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8">
+            <title>素敵曜日 - Git Master - branch</title>
+            <style>
+                </style>
+            </head>
+    <body>
+        <header>
+            <!-- menu start -->
+            <div id="menu">
+            </div>
+            <!-- menu end -->
+            
+            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
+            <h3>branch</h3>
+        </header>
+        <!-- contents start -->
+        <div id="contents">
+            <h1>branch（ブランチ）</h1>
+            
+            <h3>ブランチとは</h3>
+            <h3>並行して行われる複数の機能追加やバージョン管理する機能</h3>
+            <div>
+                ブランチとは、履歴の流れを分岐して記録していくためのものです。<br />
+                分岐したブランチは、他のブランチの影響を受けないため、同じリポジトリ中で複数の変更を同時に進めていくことができます。
+            </div>
+            
+            <div>
+            <h3 style="padding-left:20px;width:80px;background-color:rgba(0,50,200,1.0);color:white;font-size:13px;">図.1</h3>
+            <canvas id="drawing" width="600" height="240"></canvas>
+            
+            <script>
+                function makeCircle (ctx,title,x, y, width, height, colorStyle) {
+                    
+                    ctx.beginPath();
+                    //描く形状の内側の色を指定
+                    ctx.arc(x, y, width, height, Math.PI*2, true);
+                    ctx.stroke();
+                    var txt = title; //描画する文字
+                    ctx.font = "16px Arial"; //フォントにArial,40px,斜体を指定
+                    ctx.fillStyle = "black"; //塗り潰し色を黒に
+                    ctx.fillText(txt,x,y - 25);      //テキストを塗り潰しで描画
+                    ctx.fillStyle = colorStyle;
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            
+            function makeBranch (ctx,branch) {
+                //描く形状の内側の色を指定
+                makeCircle(ctx,branch.title,branch.x,branch.y,branch.width,branch.height,branch.colorStyle);
+            }
+            
+            var ctx = document.getElementById("drawing").getContext("2d");
+            ctx.beginPath();
+            
+            var newBranch = {
+                "title":"ブランチ作成",
+                "x":120,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(255, 255, 100,1.0)',
+            };
+            
+            // ブランチ作成
+            makeBranch(ctx,newBranch);
+            
+            // ブランチ：アイコン作成
+            var iconBranch = {
+                "title":"アイコン作成",
+                "x":280,
+                "y":50,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            
+            //パスの開始座標を指定する
+            ctx.moveTo(iconBranch.x + 20,iconBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,iconBranch);
+            
+            // ブランチ：iOS対応作成
+            var iOSCorrespondBranch = {
+                "title":"iOS対応作成",
+                "x":280,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            
+            //パスの開始座標を指定する
+            ctx.moveTo(iOSCorrespondBranch.x + 20,iOSCorrespondBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,iOSCorrespondBranch);
+            
+            // ブランチ：広告用バナー作成
+            var adBannerBranch = {
+                "title":"広告用バナー作成",
+                "x":280,
+                "y":190,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            //パスの開始座標を指定する
+            ctx.moveTo(adBannerBranch.x + 20,adBannerBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,adBannerBranch);
+            
+            // ブランチ：マージ
+            var mergeNewBranch = {
+                "title":"マージ",
+                "x":500,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(80, 192, 77,1.0)',
+            };
+            //パスの開始座標を指定する
+            ctx.moveTo(mergeNewBranch.x + 20,mergeNewBranch.y);
+            
+            // ブランチ作成
+            makeBranch(ctx,mergeNewBranch);
+
+            
+            
+                </script>
+            </div>
+        </div>
+        
+        <!-- contents end -->
+        
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page start -->
+        
+        <div id="page">
+            <span><a href="expansion.html">expansion（応用）</a></span> >
+
+            <span><a href="gitFlow.html">Git Flow</a></span>
+        </div>
+        
+        <!-- page end -->
+        
+        <footer>
+            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
+            Git の基本
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+    </body>
+</html>
