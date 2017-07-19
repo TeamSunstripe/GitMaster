@@ -3,20 +3,56 @@
     <head>
         <meta charset="UTF-8">
             <title>素敵曜日 - Git Master - Git Flow - master</title>
+            <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+
             <style>
                 </style>
     </head>
     <body>
         <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./master.html">master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./release.html">release</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./develop.html">develop</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./feature.html">feature</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./hotfix.html">hotfix</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav start -->
+            
             <!-- menu start -->
+            
             <div id="menu">
+                <a href="./expansion.html">応用編</a> >
+                <a href="./branch.html">ブランチ</a> >> <a href="./gitFlow.html">Git Flow</a>
+                <br />
             </div>
+            
             <!-- menu end -->
             
-            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
-            <h3>Git Flow - master</h3>
+            <h1>Git Flow - master</h1>
         </header>
+        
+        <hr />
+        
+        <!-- subtitle start-->
+        
+        <h3>Git Flow</h3>
+        <h2>master（メイン用）</h2>
+
+        <!-- subtitle end -->
+        
+        <hr />
+        
         <!-- contents start -->
+        
         <div id="contents">
             <h1>masterブランチ</h1>（必須）
             
@@ -42,6 +78,7 @@
         
         <!-- contents end -->
         
+        <hr style="clear:both;" />
         
         <!-- ad start -->
         
@@ -54,26 +91,37 @@
         <!-- page start -->
         
         <div id="page">
-            <span><a href="gitFlow.html">Git Flow</a></span>
+            <span><a href="gitFlow.html">Git Flow</a></span> ->
             
-            <span><a href="develop.html">develop</a></span>
+            + <span><a href="#">master</a></span> ->
+            
+            + <span><a href="./develop.html">develop</a></span> ->
 
-            <span><a href="hotfix.html">hotfix</a></span>
+            + <span><a href="./hotfix.html">hotfix</a></span> ->
+            
         </div>
         
         <!-- page end -->
         
+        <hr style="clear:both;" />
+        
+        <!-- footer start -->
+        
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
-            Git の基本
+            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>
                     var newDate = new Date();
+                    //年・月・日・曜日を取得する
                     var year = newDate.getFullYear();
                     document.write(year);
                     </script> Team Sun Stripe
             </div>
         </footer>
+        
+        <!-- footer end -->
+        
+
     </body>
 </html>

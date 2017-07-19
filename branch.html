@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8">
+            <title>素敵曜日 - Git Master - branch</title>
+            <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+            <style>
+                </style>
+            </head>
+    <body>
+        <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./branch.html">ブランチ</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./branchOperation.html">ブランチの運用</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./checkOut.html">check out</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./merge.html">merge</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <div id="menu">
+                <a href="./expansion.html">応用編</a> >
+                <a href="./branch.html">ブランチ</a> >> <a href="./gitFlow.html">Git Flow</a>
+                <br />
+            </div>
+            
+            <!-- menu end -->
+            
+            <h1>ブランチ - branch</h1>
+        </header>
+        
+        <hr />
+        
+        <!-- subtitle start-->
+        
+        <h3>ブランチ</h3>
+        <h2>branch</h2>
+        
+        <!-- subtitle end -->
+        
+        <hr />
+        
+        <!-- contents start -->
+        
+        <div id="contents">
+            <h1>branch（ブランチ）</h1>
+            
+            <h3>ブランチとは</h3>
+            <h3>並行して行われる複数の機能追加やバージョン管理する機能</h3>
+            <div>
+                ブランチとは、履歴の流れを分岐して記録していくためのものです。<br />
+                分岐したブランチは、他のブランチの影響を受けないため、同じリポジトリ中で複数の変更を同時に進めていくことができます。
+            </div>
+            
+            <div>
+            <h3 style="padding-left:20px;width:80px;background-color:rgba(0,50,200,1.0);color:white;font-size:13px;">図.1</h3>
+            <canvas id="drawing" width="600" height="240"></canvas>
+            
+            <script>
+                function makeCircle (ctx,title,x, y, width, height, colorStyle) {
+                    
+                    ctx.beginPath();
+                    //描く形状の内側の色を指定
+                    ctx.arc(x, y, width, height, Math.PI*2, true);
+                    ctx.stroke();
+                    var txt = title; //描画する文字
+                    ctx.font = "16px Arial"; //フォントにArial,40px,斜体を指定
+                    ctx.fillStyle = "black"; //塗り潰し色を黒に
+                    ctx.fillText(txt,x,y - 25);      //テキストを塗り潰しで描画
+                    ctx.fillStyle = colorStyle;
+                    ctx.fill();
+                    ctx.closePath();
+                }
+            
+            function makeBranch (ctx,branch) {
+                //描く形状の内側の色を指定
+                makeCircle(ctx,branch.title,branch.x,branch.y,branch.width,branch.height,branch.colorStyle);
+            }
+            
+            var ctx = document.getElementById("drawing").getContext("2d");
+            ctx.beginPath();
+            
+            var newBranch = {
+                "title":"ブランチ作成",
+                "x":120,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(255, 255, 100,1.0)',
+            };
+            
+            // ブランチ作成
+            makeBranch(ctx,newBranch);
+            
+            // ブランチ：アイコン作成
+            var iconBranch = {
+                "title":"アイコン作成",
+                "x":280,
+                "y":50,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            
+            //パスの開始座標を指定する
+            ctx.moveTo(iconBranch.x + 20,iconBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,iconBranch);
+            
+            // ブランチ：iOS対応作成
+            var iOSCorrespondBranch = {
+                "title":"iOS対応作成",
+                "x":280,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            
+            //パスの開始座標を指定する
+            ctx.moveTo(iOSCorrespondBranch.x + 20,iOSCorrespondBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,iOSCorrespondBranch);
+            
+            // ブランチ：広告用バナー作成
+            var adBannerBranch = {
+                "title":"広告用バナー作成",
+                "x":280,
+                "y":190,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(0, 80, 192,0.5)',
+            };
+            //パスの開始座標を指定する
+            ctx.moveTo(adBannerBranch.x + 20,adBannerBranch.y);
+            // ブランチ作成
+            makeBranch(ctx,adBannerBranch);
+            
+            // ブランチ：マージ
+            var mergeNewBranch = {
+                "title":"マージ",
+                "x":500,
+                "y":120,
+                "width":20,
+                "height":0,
+                "colorStyle":'rgba(80, 192, 77,1.0)',
+            };
+            //パスの開始座標を指定する
+            ctx.moveTo(mergeNewBranch.x + 20,mergeNewBranch.y);
+            
+            // ブランチ作成
+            makeBranch(ctx,mergeNewBranch);
+
+            
+            
+                </script>
+            </div>
+        </div>
+        
+        <!-- contents end -->
+        
+        <hr style="clear:both;" />
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page start -->
+        
+        <div id="page">
+            <span><a href="expansion.html">応用編</a></span> ->
+            
+            + <span><a href="#">ブランチ</a></span>
+            
+            + <span><a href="#./branchOperation.html">ブランチの運用</a></span> ->
+            
+            <!--span><a href="#./checkOut.html">check out</a></span-->
+            
+            <!--span><a href="#./merge.html">merge</a></span-->
+            
+            + <span><a href="./gitFlow.html">Git Flow</a></span> ->
+
+        </div>
+        
+        <!-- page end -->
+        
+        <hr style="clear:both;" />
+        
+        <!-- footer start -->
+        
+        <footer>
+            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+        
+        <!-- footer end -->
+        
+
+    </body>
+</html>
