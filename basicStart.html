@@ -3,17 +3,56 @@
     <head>
         <meta charset="UTF-8">
             <title>素敵曜日 - Git Master - はじめに</title>
+            <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
             <style>
                 </style>
     </head>
     <body>
         <header>
-            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
-            <h3>Git の基本</h3>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basicStart.html">Gitの基本</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./basicGitVersion.html">Gitバージョン管理</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./basicGitRepository.html">履歴管理 - リポジトリ</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./basicGitCommit.html">変更履歴 - コミット</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./basicGitWorkTree.html">ワークツリー</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="#./basicGitIndex.html">インデックス</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <div id="menu">
+                <a href="./basic.html">基礎編</a>
+            </div>
+            
+            <!-- menu end -->
+            
+            <h1>Git の基本 - basic start</h1>
         </header>
+        
+        <hr />
+        
+        <!-- subtitle start-->
+        
+        <h3>はじめに</h3>
+        <h2>start</h2>
+        
+        <!-- subtitle end -->
+        
+        <hr />
+        
         <!-- contents start -->
+        
         <div id="contents">
-            <h1>はじめに</h1>
+            <h1>start（はじめに）</h1>
             <p id="aisatu" style="background-color:rgba(200,200,255,0.5);">
             おはようからおやすみまで GitをMasterしたい 京都生まれの ザンギ と申します。<br />
             このサイトは、一緒にGitを学びながら 更には、平行に運用方法も学んでいけるように作ってきたいと思っています。<br />
@@ -67,27 +106,55 @@
         
         <!-- contents end -->
         
+        <hr style="clear:both;"/>
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
         <!-- page start -->
         
         <div id="page">
-            <!--span>前へ戻る</span /-->
-            <span>次へ進む</span>
+            <span><a href="./basic.html">基礎編</a></span> ->
+
+            + <span><a href="#">Gitの基本</a></span> ->
+            
+            + <span><a href="#./basicGitVersion.html">Gitバージョン管理</a></span> ->
+            
+            <!--span><a href="#./basicGitRepository.html">履歴管理 - リポジトリ</a></span-->
+            
+            <!--span><a href="#./basicGitCommit.html">変更履歴 - コミット</a></span-->
+            
+            <!--span><a href="#./basicGitWorkTree.html">ワークツリー</a></span-->
+            
+            <!--span><a href="#./basicGitIndex.html">インデックス</a></span-->
+            
         </div>
         
         <!-- page end -->
         
-        <div style="clear:both;text-align:center;">
-            
-            &copy; 2011 - <script>
-                var newDate = new Date();
-                //年・月・日・曜日を取得する
-                var year = newDate.getFullYear();
-                document.write(year);
-                </script> Team Sun Stripe
-        </div>
+        <hr style="clear:both;"/>
+        
+        <!-- footer start -->
+        
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > <a href="./index.html">素敵曜日 - Git Master</a><br />
-            Git の基本
+            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
         </footer>
+        
+        <!-- footer end -->
+
     </body>
 </html>
