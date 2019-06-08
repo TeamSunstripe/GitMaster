@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja" target="_blank">
     <head>
-        <meta charset="UTF-8">
-            <title>素敵曜日 - Git Master - Git Flow - feature</title>
-            <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
-            <style>
-                </style>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - Git Flow - feature</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
     </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+        function openURL(url) {
+            ga('send', 'event', {
+               eventCategory: 'GitMaster - feature - URL - ' + url,
+               eventAction: 'click',
+               eventLabel: 'URL_GitMaster_feature : ' + url
+               });
+               window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+        }
+    </script>
+    
     <body>
         <header>
             <!-- nav start -->
@@ -35,7 +58,7 @@
             </div>
             
             <!-- menu end -->
-
+            
             <h1>Git Flow - feature</h1>
         </header>
         
@@ -59,15 +82,15 @@
             <h3>feature/[派生元バージョン番号]/[機能名]</h3>
             中〜大規模な機能追加・改修などを行う作業ブランチ
             <div>
-            開発をする際に<a href="develop.html">develop</a>ブランチから、<a href="feature.html">feature</a>ブランチを切る<br />
-            完了後は、<a href="develop.html">develop</a>ブランチにマージされて、<a href="feature.html">feature</a>ブランチは削除される<br />
-            規模の機能追加・改修などを行う作業ブランチです。<br />
-            <br />
-            機能追加の紆余曲折を大事にして、このブランチにコミットログを残していくことになりますが、機能追加の只中であるときはどうしても、およそ完全でないバージョンをコミットしていまうことも少なくありません。<br />
-            <br />
-            <a href="feature.html">feature</a>ブランチを切っておけば、<a href="develop.html">develop</a>ブランチを共有する他の開発者などに迷惑をかけることもないので、Gitの特性上、ブランチさえ切ってしまえばある程度手元で柔軟に対応することができます。<br />
-            <br />
-            この開発ブランチは、役割の都合上、個人で完結するような機能追加であればローカルブランチとして作られて、そのまま手元でdevelopブランチによってmerge -> pushという流れになり、<a href="feature.html">feature</a>ブランチそのものがpushされないケースも多いでしょう。反対に、他の開発者とリモート越しに共有したい機能追加の作業であれば、リモートにpushさえすれば済む話です。<br />
+                開発をする際に<a href="develop.html">develop</a>ブランチから、<a href="feature.html">feature</a>ブランチを切る<br />
+                完了後は、<a href="develop.html">develop</a>ブランチにマージされて、<a href="feature.html">feature</a>ブランチは削除される<br />
+                規模の機能追加・改修などを行う作業ブランチです。<br />
+                <br />
+                機能追加の紆余曲折を大事にして、このブランチにコミットログを残していくことになりますが、機能追加の只中であるときはどうしても、およそ完全でないバージョンをコミットしていまうことも少なくありません。<br />
+                <br />
+                <a href="feature.html">feature</a>ブランチを切っておけば、<a href="develop.html">develop</a>ブランチを共有する他の開発者などに迷惑をかけることもないので、Gitの特性上、ブランチさえ切ってしまえばある程度手元で柔軟に対応することができます。<br />
+                <br />
+                この開発ブランチは、役割の都合上、個人で完結するような機能追加であればローカルブランチとして作られて、そのまま手元でdevelopブランチによってmerge -> pushという流れになり、<a href="feature.html">feature</a>ブランチそのものがpushされないケースも多いでしょう。反対に、他の開発者とリモート越しに共有したい機能追加の作業であれば、リモートにpushさえすれば済む話です。<br />
             </div>
         </div>
         
@@ -89,7 +112,7 @@
             <span><a href="./gitFlow.html">Git Flow</a></span> ->
             
             + <span><a href="./develop.html">develop</a></span> ->
-
+            
             + <span><a href="#">feature</a></span>
             
         </div>
@@ -115,6 +138,6 @@
         
         <!-- footer end -->
         
-
+        
     </body>
 </html>
