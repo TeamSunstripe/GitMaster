@@ -18,6 +18,13 @@ header {
     
 }
 
+p {
+    background-color: rgba(255,255,255,0.5);
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
 footer {
     background-color: rgba(100,255,255,0.5);
     background: linear-gradient(-50deg, #d558c8 50%, #24d292 100%);
