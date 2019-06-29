@@ -43,9 +43,9 @@
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./branch.html">ブランチ</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="#./branchOperation.html">ブランチの運用</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="#./checkOut.html">check out</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="#./merge.html">merge</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./branchOperation.html">ブランチの運用</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./checkOut.html">check out</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./merge.html">merge</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
                 </menu>
             </nav>
@@ -75,6 +75,8 @@
         
         <!-- subtitle start-->
         
+        <a class="tagbutton" href="./basic.html">基礎編</a>
+
         <h3>ブランチ</h3>
         <a href="./branch.html" alt="branch" title="ブランチ"><h2>branch</h2></a>
         
@@ -85,6 +87,7 @@
         <!-- contents start -->
         
         <section id="contents">
+
             <h1>branch（ブランチ）</h1>
             
             <article>
@@ -97,7 +100,7 @@
                 </p>
             </article>
             
-            <div>
+            <article style="width:100%;overflow: scroll;">
                 <h5 style="padding-left:20px;width:80px;background-color:rgba(0,50,200,1.0);color:white;font-size:13px;">図.1</h5>
                 <canvas id="drawing" width="600" height="240"></canvas>
                 
@@ -195,11 +198,29 @@
                 
                 // ブランチ作成
                 makeBranch(ctx,mergeNewBranch);
-                
-                
-                
-                    </script>
-            </div>
+            </script>
+            </article>
+
+            <a class="tagbutton" href="./expansion.html">応用編</a>
+
+            <article>
+                <h3>統合ブランチとは</h3>
+                <p>
+                    リリース版がいつでも作成可能な状態にしておくためのブランチです。<br />
+                    また、トピックブランチの分岐元としても使用するため、常に安定した状態を保つ必要があるため、Jenkins等のCIツールを使用した自動ビルドやテストで、品質担保すると良いです。<br />
+                    何かしらの変更や機能追加を行う場合、この統合ブランチからトピックブランチを作成して作業を行います。<br />
+                    (Subversionで言う、trunkと概念は同じです。Gitではmasterを指すことが多いです。)<br />
+                </p>
+            </article>
+    
+            <article>
+                <h3>トピックブランチとは</h3>
+                <p>
+                    機能追加やバグ修正といったある課題や特定の目的実現に関する作業を行うために作成するブランチです。<br />
+                    複数の課題に関する作業を同時に行う時は、その数だけトピックブランチが作成されます。<br />
+                    トピックブランチは統合ブランチから分岐する形で作成され、作業が完了したら統合ブランチに取り込まれます。<br />
+                </p>
+            </article>
         </section>
         
         <!-- contents end -->
