@@ -51,13 +51,16 @@
             <menu id="menu">
                 <a class="button" href="./index.html">GitMaster</a>
                 <a class="button active" href="./basic.html">基礎編</a>
-                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
-                <a class="subbutton" href="#./repository.html">リポジトリ</a>
-                <a class="subbutton" href="#./tag.html">タグ</a>
-                <a class="subbutton" href="#./commit.html">コミット</a>
+                <a class="subbutton" href="#basicStart">Gitの基本</a>
+                <a class="subbutton" href="./basicRepository.html">リポジトリ</a>
+                <a class="subbutton" href="./basicCommit.html">コミット</a>
+                <a class="subbutton" href="./basicWorktree.html">ワークツリー</a>
+                <a class="subbutton" href="./basicIndex.html">インデックス</a>
+                <a class="subbutton" href="#repository">リポジトリの共有</a>
+                <a class="subbutton" href="#merge">変更履歴の統合</a>
                 <br />
             </menu>
-            
+
             <!-- menu end -->
 
             <h1 id="header_title">基礎編 - basic</h1>
@@ -80,9 +83,61 @@
         
         <!-- contents start -->
         
-        <div id="contents">
+        <section id="contents">
             <h1>basic（基礎編）</h1>
-        </div>
+
+            <article>
+                <a href="./basicGitVersion.html"><h4>Gitを使ったバージョン管理</h4></a>
+                <p>git によるバージョンを管理するよ</p>
+                <a href="./basicRepository.html"><h4>リポジトリ</h4></a>
+                <p>履歴を管理するもの</p>
+                <a href="./basicCommit.html"><h4>コミット</h4></a>
+                <p>変更を記録するもの</p>
+                <h1 style="text-align: center;">ワークツリーとインデックス</h1>
+                <a href="./basicWorktree.html"><h4>ワークツリー</h4></a>
+                <p>Gitの管理下に置かれた作業をしているディレクトリのこと</p>
+                <a href="./basicIndex.html"><h4>インデックス</h4></a>
+                <p>リポジトリにコミットする準備をするための場所</p>
+                <h1 style="text-align: center;">変更履歴の統合</h1>
+                <a href="./basicMeget.html"><h4>マージ</h4></a>
+                <p>変更履歴の統合</p>
+                <a href="./basicConfrict.html"><h4>コンフリクト</h4></a>
+                <p>競合の解決</p>
+            </article>
+
+            <a name="basicStart" href="basicStart.html"><h1>Gitの基本編</h1></a>
+
+            <article>
+                <p>チュートリアル</p>
+                <a href=""><h4>Gitのインストール</h4></a>
+                <a href=""><h4>初期設定</h4></a>
+                <a href=""><h4>新しいリポジトリを作成する</h4></a>
+                <a href=""><h4>ファイルをコミットする</h4></a>
+                <a href=""><h4>リポジトリの共有</h4></a>
+                <a href=""><h4>リモートリポジトリにプッシュする</h4></a>
+                <a href=""><h4>リモートリポジトリをクローンする</h4></a>
+                <a href=""><h4>リモートリポジトリからプルする</h4></a>
+            </article>
+
+            <a name="repository" href="basicRepository.html"><h1>リポジトリの共有</h1></a>
+
+            <article>
+                <p>チュートリアル</p>
+                <a href=""><h4>リモートリポジトリを作成する</h4></a>
+                <a href=""><h4>リモートリポジトリにプッシュする</h4></a>
+                <a href=""><h4>リモートリポジトリをクローンする</h4></a>
+                <a href=""><h4>クローンしたリポジトリからプッシュする</h4></a>
+                <a href=""><h4>リモートリポジトリからプルする</h4></a>
+            </article>
+
+            <a name="merge" href="basicMerge.html"><h1>変更履歴の統合</h1></a>
+            <article>
+                <p>チュートリアル</p>
+                <a href=""><h4>競合状態でプッシュする</h4></a>
+                <a href=""><h4>競合を解決する</h4></a>
+            </article>
+
+        </section>
         
         <!-- contents end -->
         
