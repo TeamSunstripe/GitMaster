@@ -25,9 +25,9 @@
     <script>
         function openURL(url) {
             ga('send', 'event', {
-               eventCategory: 'GitMaster - basic - URL - ' + url,
+               eventCategory: document.title + url,
                eventAction: 'click',
-               eventLabel: 'URL_GitMaster_basic : ' + url
+               eventLabel: document.title + ' : open : ' + url
                });
                window.open(url, '_blank'); // 新しいタブを開き、ページを表示
         }

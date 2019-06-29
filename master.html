@@ -23,16 +23,16 @@
         </script>
     
     <script>
-        function openURL(url) {
-            ga('send', 'event', {
-               eventCategory: 'GitMaster - master - URL - ' + url,
-               eventAction: 'click',
-               eventLabel: 'URL_GitMaster_master : ' + url
-               });
-               window.open(url, '_blank'); // 新しいタブを開き、ページを表示
-        }
-    </script>
-    
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
