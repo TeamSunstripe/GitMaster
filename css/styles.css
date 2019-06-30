@@ -271,6 +271,98 @@ a.smallbutton.active {
     text-decoration:none;
 }
 
+/* prebutton */
+a.prebutton {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size:10px;
+    font-weight:bolder;
+    text-decoration:none;
+    text-align:center;
+    border-radius:5px;
+}
+a.prebutton:visited {
+    color: rgba(248, 240, 100, 0.973);
+}
+a.prebutton:hover {
+    background-color: rgba(100,255,255,0.5);
+    color: rgba(248, 142, 213, 0.973);
+    text-decoration: none;
+}
+a.prebutton:active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+a.prebutton.active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+
+/* prevbutton */
+a.prevbutton {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size:20px;
+    font-weight:bolder;
+    text-decoration:none;
+    text-align:center;
+    border-radius : 5px 0 0 5px;
+}
+a.prevbutton:visited {
+    color: rgba(248, 240, 100, 0.973);
+}
+a.prevbutton:hover {
+    background-color: rgba(100,255,255,0.5);
+    color: rgba(248, 142, 213, 0.973);
+    text-decoration: none;
+}
+a.prevbutton:active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+a.prevbutton.active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+
+/* nextbutton */
+a.nextbutton {
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size:20px;
+    font-weight:bolder;
+    text-decoration:none;
+    text-align:center;
+    border-radius : 0 5px 5px 0;
+}
+a.nextbutton:visited {
+    color: rgba(248, 240, 100, 0.973);
+}
+a.nextbutton:hover {
+    background-color: rgba(100,255,255,0.5);
+    color: rgba(248, 142, 213, 0.973);
+    text-decoration: none;
+}
+a.nextbutton:active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+a.nextbutton.active {
+    background-color: rgba(100,255,255,0.5);
+    text-decoration:none;
+}
+
 h1 {
     background-color: rgba(100,255,255,0.5);
     background: linear-gradient(-50deg, #d558c8 50%, #24d292 100%);
@@ -392,6 +484,31 @@ h4:hover::before,
 h4:hover::after {
     height: 0;
     background-color: #59b1eb;
+}
+
+.comment {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:rgba(0,0,255,0.5);
+    border-radius:20px;
+}
+.point {
+    margin-top: 10px;
+    background-color: rgba(0,0,255,0.5);
+    border: 2px solid rgba(0,0,255,0.5);
+    color: #fff;
+}
+.code {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    background-color: black;
+    color: rgb(0, 255, 100);
+    font-size:1.2vw;
 }
 
 @media screen and ( max-width:800px ) {
