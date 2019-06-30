@@ -23,23 +23,23 @@
         </script>
     
     <script>
-        function openURL(url) {
-            ga('send', 'event', {
-               eventCategory: 'GitMaster - feature - URL - ' + url,
-               eventAction: 'click',
-               eventLabel: 'URL_GitMaster_feature : ' + url
-               });
-               window.open(url, '_blank'); // 新しいタブを開き、ページを表示
-        }
-    </script>
-    
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
             
             <nav class="mainMenuList">
                 <menu>
-                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./master.html">master</a></li>
@@ -119,7 +119,7 @@
         <!-- page start -->
         
         <menu id="page">
-                <span><a class="smallbutton" href="gitFlow.html">Git Flow</a></span>
+                <span><a class="smallbutton" href="./gitFlow.html">Git Flow</a></span>
                 <span><a class="smallbutton" href="./master.html">master</a></span>
                 <span><a class="smallbutton" href="./develop.html">develop</a></span>
                 <span><a class="smallbutton active" href="./feature.html">feature</a></span>
@@ -132,7 +132,7 @@
         <!-- footer start -->
         
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>
