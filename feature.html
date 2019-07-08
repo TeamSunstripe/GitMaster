@@ -74,18 +74,38 @@
         
         <hr />
         
+        <!-- contents start -->
+        <main id="contents">
+        
         <!-- subtitle start-->
         
         <h3>Git Flow</h3>
         <a href="./feature.html" alt="feature" title="開発用 ブランチ"><h2>feature（開発ブランチ）</h2></a>
         
         <!-- subtitle end -->
+                
+        <!-- subtitle basic start
         
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>基礎編</h3>
+        <h2>basic</h2>
+        
+        subtitle basic end -->
+
+        <!-- subtitle expansion start-->
+        
+        <a name="expansion" class="tagbutton" href="./expansion.html">応用編</a>
+
+        <h3>Git Flow</h3>
+        <a href="./feature.html" alt="feature" title="開発用 ブランチ"><h2>feature（開発ブランチ）</h2></a>
+
+        <!-- subtitle expansion end -->
+
         <hr />
         
-        <!-- contents start -->
-        
-        <div id="contents">
+        <!-- basic（基礎編） start -->
+        <section id="basic">
             <h1>featureブランチ</h1>（必須）
             
             <h3>命名規則</h3>
@@ -102,8 +122,23 @@
                 <br />
                 この開発ブランチは、役割の都合上、個人で完結するような機能追加であればローカルブランチとして作られて、そのまま手元でdevelopブランチによってmerge -> pushという流れになり、<a href="feature.html">feature</a>ブランチそのものがpushされないケースも多いでしょう。反対に、他の開発者とリモート越しに共有したい機能追加の作業であれば、リモートにpushさえすれば済む話です。<br />
             </div>
-        </div>
         
+        </section>
+<!-- basic（基礎編） end // -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
         
         <hr style="clear:both;" />

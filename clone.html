@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - クローン（clone）</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
+    <body>
+        <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button" href="./basic.html">基礎編</a>
+                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                <a class="subbutton" href="./repository.html">リポジトリ</a>
+                <a class="subbutton" href="./tag.html">タグ</a>
+                <a class="subbutton active" href="./commit.html">コミット</a>
+                <br />
+            </menu>
+            
+            <!-- menu end -->
+            <h1 id="header_title">クローン - clone</h1>
+            <p id="header_description">
+                ここでは、Gitにおいての基礎、clone（クローン）のことを紹介していきます。
+            </p>
+        
+        </header>
+        
+        <hr />
+        
+        <!-- contents start -->
+        <main id="contents">
+        
+        
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>クローン</h3>
+        <a href="./clone.html#basic" alt="checkout" title="クローン"><h2>clone</h2></a>
+        
+        <!-- subtitle basic end -->
+        
+        <hr />
+        
+        <!-- basic（基礎編） start -->
+        <section id="basic">
+                <h1>basic（基礎編）</h1>
+                <article>
+                        <!-- 基礎編 - 説明// -->
+                        <h2>クローン</h2>
+                        <h2>Clone</h2>
+                        <p>
+                        リモートリポジトリを複製するには、クローン(Clone)という操作を行います。
+                        <br />
+                        クローンを実行すると、リモートリポジトリの内容をまるまるダウンロードしてきて、別のマシンにローカルリポジトリとして作成できます。
+                    </p>
+                </article>
+                <!--article>
+                    <p>
+                    </p>
+                </article//-->
+
+<!--  code など start -->
+                <article>
+<pre class="code">
+$ git clone
+</pre>
+                </article>
+
+                <article>
+                    <p>
+                    という形式でコメントを書きます。
+                    </p>
+                </article>
+<!--  code など end -->
+        </section>
+<!-- basic（基礎編） end // -->
+
+        <!-- subtitle setup（setup編） start-->
+        
+        <a name="setup" class="tagbutton" href="./basicStart.html">setup編</a>
+
+        <h3>クローン</h3>
+        <a href="./clone.html#setup" alt="clone" title="クローン"><h2>clone</h2></a>
+        
+        <!-- subtitle setup（setup編） end -->
+        
+        <!-- setup（setup編） start -->
+<section id="setup">
+        <h1>setup（setup編）</h1>
+        <article>
+            <!-- setup編 - 説明// -->
+            リポジトリの共有
+            <h2>リモートリポジトリをクローンする</h2>
+            <p>
+                誰かの変更履歴の入ったリモートリポジトリがあれば、それをまるごと複製して自分の手元で作業をすることができます。
+                <br />    
+                ここまでは、ローカルリポジトリの基本的な使い方を説明してきました。ここからは、リモートリポジトリを使ってローカルリポジトリの変更履歴を共有する方法について説明します。
+            </p>
+        </article>
+
+        <article>
+            <h2>Clone</h2>
+            <p>
+                リモートリポジトリを複製するには、クローン(Clone)という操作を行います。
+                <br />
+                クローンを実行すると、リモートリポジトリの内容をまるまるダウンロードしてきて、別のマシンにローカルリポジトリとして作成できます。
+            </p>
+        </article>
+
+        <article>
+            <h3>Note</h3>
+            <p>
+                クローンしたローカルリポジトリは変更履歴も複製されているので、元々のリポジトリと全く同じように履歴の参照やコミットをすることができます。
+            </p>
+        </article>
+
+</section>
+        <!-- setup（setup編） end -->
+
+        <!-- setup page nav start -->
+        <nav id="setup_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./push.html#setup">「setup編 - リモートリポジトリにプッシュする」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./clone.html#setup">「setup編 - リモートリポジトリをクローンする」</a></span>
+                        
+                <span><a class="nextbutton" href="./repository.html#setup">に進む </a></span>
+                        
+        </nav>
+        <!-- setup page nav end -->
+
+
+<!-- repository共有（repository編） start // -->
+<section id="repository">
+
+        <!-- subtitle start-->
+        
+        <a name="repository" class="tagbutton" href="./basicStart.html#repository">repository編</a>
+
+        <h3>プッシュ</h3>
+        <a href="./push.html#repository" alt="push" title="プッシュ"><h2>push</h2></a>
+        
+        <!-- subtitle end -->
+
+        <h2>チュートリアル2 リポジトリの共有</h2>
+        <article class="comment">
+                <h3>リポジトリをプッシュする</h3>
+                    <p>
+                        リモートリポジトリにプッシュする
+                        <br />
+                        「チュートリアル Gitの基本」で作成したローカルリポジトリ「tutorial」をプッシュしましょう。
+                        <br />
+                        お使いのパソコンの環境を選んでください。
+                        </p>
+                </article>
+
+                <article>
+                    <h3>コンソール</h3>
+                    <p>
+                        リモートリポジトリにローカルリポジトリの履歴をpushしましょう
+                    </p>
+                </article>
+                    
+                <article>
+                    <h3>コンソール</h3>
+                    <p>
+                        リモートリポジトリのアドレスは名前を付けて記録しておくことができます。記録しておくと、pushするときには毎回長いリモートリポジトリのアドレスを入力する必要がなくなります。
+                        まずは「origin」という名前でリモートリポジトリを登録してからpushを行います。
+                    </p>
+                    <p>
+                            リモートリポジトリを追加するには、remoteコマンドを使用します。&lt;name&lg;は登録名、&lt;url&lg;はリモートリポジトリのURLを指定します。
+                    </p>
+
+<pre class="code">
+$ git remote add &lt;name&lg; &lt;url&lg;
+</pre>
+
+                    <p>  
+                            次のコマンドを実行して、前のページで作成したリモートリポジトリのURLをoriginという名前で登録します。
+                    </p>   
+ 
+<pre class="code">
+$ git remote add origin
+</pre>
+
+                    <p>  
+                        https://[your_space_id].backlog.jp/git/[your_project_key]/tutorial.git
+                        プッシュやプルは実行時にリモートリポジトリ名を省略すると、originという名前のリモートリポジトリを使用します。そのため、リモートリポジトリにはoriginという名前を付けるのが一般的です。
+                        リポジトリをプッシュするには、pushコマンドを使用します。&lt;repository&lg;はプッシュ先のアドレス、&lt;refspec&lg;はプッシュするブランチを指定します。ブランチについては発展編で詳しく説明します。
+                    </p>
+
+<pre class="code">
+$ git push &lt;repository&lg; &lt;refspec&lg;...
+</pre>
+
+                    <p>  
+                        次のコマンドを実行してリモートリポジトリoriginにコミットをpushします。実行オプションで-uを指定すると、次回以降はそのブランチ名の指定を省略できます。ただし、一番最初、空のリモートリポジトリにpushするときはリモートリポジトリ名やブランチ名を省略できません。
+                        <br />
+                        途中でユーザ名とパスワードを求められるので、Backlogのユーザ名とパスワードを入力してください。
+                    </p>
+
+<pre class="code">
+$ git push -u origin master
+</pre>
+
+<p>  
+        Username: &lt;ユーザ名&lg;
+        Password: &lt;パスワード&lg;
+</p>
+
+<p>  
+        Counting objects: 3, done.
+        Writing objects: 100% (3/3), 245 bytes, done.
+        Total 3 (delta 0), reused 0 (delta 0)
+        To https://nulab.backlog.jp/git/BLG/tutorial.git
+         * [new branch]      master -> master
+        BacklogのGitのページを開いてください。最近の更新にプッシュの項目が追加されています。
+</p>
+
+<p>  
+        リポジトリのファイル一覧には、pushしたリポジトリのファイルが追加されました。
+        <br />
+        次はこのリモートリポジトリばクローンするばい！
+</p>
+
+</article>
+        
+            </section>
+<!-- repository（repository編） end // -->
+
+        <!-- repository page nav start -->
+        
+        <nav id="repository_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html#repository">「repository編 - リモートリポジトリをBacklog上に作成する」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./push.html#repository">「repository編 - リポジトリをプッシュする」</a></span>
+                        
+                <span><a class="nextbutton" href="./clone.html#repository">「repository編 - リポジトリをクローンする」に進む </a></span>
+                        
+        </nav>
+
+<!-- repository page nav end -->
+
+
+        チュートリアル2 リポジトリの共有
+        リモートリポジトリをクローンする
+        リモートリポジトリを複製して別の所でも作業ができるようにしてみましょう。
+        
+        お使いのパソコンの環境を選んでください。
+        
+        別のユーザになったつもりでリモートリポジトリば、別のディレクトリ「tutorial2」にクローンするばい。
+        
+        サルのダイミョー
+        コンソール
+        リポジトリを複製するにはcloneコマンドを使用します。<repository>はリモートリポジトリのURL、<directory>は複製先のディレクトリ名を指定します。
+        
+        $ git clone <repository> <directory>
+        次のコマンドを実行すると、カレントディレクトリにtutorial2という名前のディレクトリ名でリモートリポジトリが複製されます。
+        
+        $ git clone https://nulab.backlog.jp/git/BLG/tutorial.git tutorial2
+        Cloning into 'tutorial2'...
+        Username: <ユーザ名>
+        Password: <パスワード>
+        remote: Counting objects: 3, done.
+        remote: Total 3 (delta 0), reused 0 (delta 0)
+        Unpacking objects: 100% (3/3), done.
+        複製したリポジトリ「tutorial2」内に、次の内容のsample.txtが存在しているか確認してください。
+        
+        サルでもわかるGitコマンド
+        
+
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
+        <!-- contents end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page nav start -->
+        <!-- TODO: チュートリアル機能がある場合-->
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicRepository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basicCommit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./basicWorktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
+        
+        <!-- page start -->
+        
+        <menu id="page">
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
+        </menu>
+        
+        <!-- page end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- footer start -->
+        
+        <footer>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+        
+        <!-- footer end -->
+        
+    </body>
+</html>

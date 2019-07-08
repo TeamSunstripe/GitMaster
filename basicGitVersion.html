@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - 基礎編 - Gitバージョン管理（Git Version）</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        <body>
+            <header>
+                <!-- nav start -->
+                
+                <nav class="mainMenuList">
+                    <menu>
+                        <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./basic.html">basic</a></li>
+                        <li class="mainMenuList"><a class="mainMenu selected" href="./basicStart.html">Gitの基本</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./basicGitVersion.html">Gitバージョン管理</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./repository.html">履歴管理 - リポジトリ</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./commit.html">変更履歴 - コミット</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./worktree.html">ワークツリー</a></li>
+                        <li class="mainMenuList"><a class="mainMenu" href="./basicIndex.html">インデックス</a></li>
+                    </menu>
+                </nav>
+                
+                <!-- nav end -->
+                
+                <!-- menu start -->
+                
+                <menu id="menu">
+                    <a class="button" href="./index.html">GitMaster</a>
+                    <a class="button" href="./basic.html">基礎編</a>
+                    <a class="subbutton active" href="./basicStart.html">Gitの基本 - はじめに</a>
+                    <a class="subbutton" href="./branch.html">ブランチ</a> 
+                </menu>
+                
+                <!-- menu end -->
+                
+                <h1 id="header_title">Git の基本 - Gitバージョン管理（Git Version）</h1>
+                <p id="header_description">
+                ここでは、様々なGit操作において基本となるGitバージョン管理（Git Version）のことを紹介していきます。
+                </p>
+                
+            </header>
+            
+            <hr />
+            
+            <!-- contents start -->
+            <main id="contents">
+            
+            <!-- subtitle start-->
+                    
+            <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+    
+            <h3>Gitバージョン管理</h3>
+            <a href="./basicGitVersion.html" alt="basic Git Version" title="Gitバージョン管理"><h2>Git Version</h2></a>
+            
+            <!-- subtitle end -->
+            
+            <!-- basic（基礎編） start -->
+            <section id="basic">
+                <h1>Git Version（Gitバージョン管理）</h1>
+                <article class="comment">
+                        <p>
+                            おはようからおやすみまで GitをMasterしたい 京都生まれの ザンギ と申します。<br />
+                            このサイトは、一緒にGitを学びながら 更には、平行に運用方法も学んでいけるように作ってきたいと思っています。<br />
+                            現場であれ？どうしようってな困らないような開発、そしてチームをよくして行くために書いていきます。<br />
+                        </p>
+                    </article>
+                
+                <article>
+                        <p>
+                                みなさんの開発現場では、Gitを使われていますか？<br />
+                        SVNですか？それとも、ファイルに名前を変えてフォルダなどを管理していますか？<br />
+                        </p>
+                        <p>
+                                例えば、ファイルを編集前の状態に戻したい時、どのようにしていますか？
+                        <br />
+                もっとも原始的なやり方は、「編集前のファイルやディレクトリに日付をつけてコピーしておく」方法があります。<br />
+                しかし、この方法だと、ファイルを編集するごとに自分でファイルをコピーするというのは大変で、上書き保存してしまったり、コピー忘れた！などの間違いも起こしやすくなります。。。<br />
+                        </p>
+                    </article>
+                <article>
+                        <p>
+                        さらに、日付だけの管理で、無秩序に名前を付けてしまった時、どのファイルが最新のものか区別が付きにくいですね。<br/>
+                        また、チームで共有して作業しているファイルでは、編集者の名前を入れておくこともあり徐々に、どのような変更を行ったかが開いてみないとわからないという点がありました。<br />
+                        <br />
+                        また、チームで共有しているファイルの場合では、二人で同時に編集してしまい、先に編集した人の変更内容が消えてしまったりという職場のトラブルになりうる場合があります。<br />
+                        キャーーーーー<br />
+                        </p>
+                </article>
+    
+                <article>
+                        <p>
+                        このような問題を解決するために作られたのが Git,SVNなどのバージョンを管理するシステムがあります。
+                        今回は、Gitについて一緒に開発をしながら学んでいきましょう！
+                        </p>
+                </article>
+                
+                <h2>バージョン管理 Git</h2>
+                <article>
+                        <p>
+                            Gitは、どんなシステムについて<br/>
+                            「分散型バージョン管理」、Linuxのソースコードを効率良く管理するために開発されたシステムになります。<br />
+                            <br />
+                            Gitができることは、、、<br />
+                            ・ファイルの状態を好きなときに<a href="./commit.html">更新履歴</a>として保存してけます。<br />
+                            こうすることにより、一度編集したファイルを過去の状態に戻したり、編集ある差分を表示したりすることが可能になります。<br />
+                            <br />
+                            ・古いファイルを元に編集したファイルから他人の編集した最新ファイルを上書きしようとすると、サーバにアップロードした時に警告が出ます。<br />
+                            そのため、知らず知らずのうちに他人の編集内容を上書きしてしまうといった失敗は起こりません。
+                        </p>
+                </article>
+                
+                <h4 class="point">ポイント</h4>
+                <article class="comment">
+                    <p>
+                    Git でファイル管理すると<a href="./commit.html">更新履歴</a>がGitに保存されて行くので、手元にバックアップ用のファイルがなくなり、今までの経験での上書き保存や作業中の同時編集でのトラブルもなくなります！！
+                    </p>
+                </article>
+            </section>
+    <!-- basic（基礎編） end // -->
+    
+            <!-- basic page nav start -->
+            
+            <nav id="basic_page_nav" style="width:80%">
+            
+                    <span><a class="prevbutton" href="./basicStart.html#basic">「基礎編 - はじめに」に戻る </a></span>
+                    
+                    <span><a class="subbutton" href="./basicGitVersion.html#basic">「基礎編 - Gitの管理について」</a></span>
+                            
+                    <span><a class="nextbutton" href="./repository.html#basic">「基礎編 - 履歴を管理するリポジトリ」に進む </a></span>
+                            
+            </nav>
+    
+            <!-- basic page nav end -->
+            
+    <!-- expansion（応用編） start // 
+    <section id="expantion">
+    <h1>expansion（応用編）</h1>
+            
+    <article>
+        <h2>応用編 - 概要</h2>
+            <p>
+                応用編 - 説明
+            </p>
+    </article>
+    </section>
+    !-- expansion（応用編） end // -->
+            </main>
+            <!-- contents end -->
+            
+            <hr style="clear:both;"/>
+            
+            <!-- ad start -->
+            
+            <div id="ad">
+                <!-- 広告枠 //-->
+            </div>
+            
+            <!-- ad end -->
+            
+            <!-- page nav start -->
+            
+            <nav id="pagenav" style="width:80%">
+            
+                    <span><a class="prevbutton" href="./basic.html">「基礎編」に戻る </a></span>
+                    
+                    <span><a class="subbutton" href="./basicStart.html">「基礎編 - はじめに」</a></span>
+                            
+                    <span><a class="nextbutton" href="./basicRepository.html">「履歴を管理するリポジトリ」に進む </a></span>
+                            
+            </nav>
+    
+            <!-- page nav end -->
+    
+            <hr style="clear:both;"/>
+    
+            <!-- page start -->
+            
+            <menu id="page">
+            
+                <span><a class="smallbutton" href="./basic.html">基礎編</a></span>
+                <span><a class="smallbutton active" href="./basicStart.html">Gitの基本</a></span>   
+                <span><a class="smallbutton" href="basicGitVersion.html">Gitバージョン管理</a></span>
+                <span><a class="smallbutton" href="basicRepository.html">履歴管理 - リポジトリ</a></span>
+                <span><a class="smallbutton" href="basicCommit.html">変更履歴 - コミット</a></span>
+                <span><a class="smallbutton" href="basicWorkTree.html">ワークツリー</a></span>
+                <span><a class="smallbutton" href="basicIndex.html">インデックス</a></span>
+            </menu>
+            
+            <!-- page end -->
+            
+            <hr style="clear:both;"/>
+            
+            <!-- footer start -->
+            
+            <footer>
+                <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+                <div style="clear:both;text-align:center;">
+                    
+                    &copy; 2011 - <script>
+                        var newDate = new Date();
+                        //年・月・日・曜日を取得する
+                        var year = newDate.getFullYear();
+                        document.write(year);
+                        </script> Team Sun Stripe
+                </div>
+            </footer>
+            
+            <!-- footer end -->
+            
+        </body>
+    </html>
+    

@@ -2,8 +2,8 @@
 <html lang="ja" target="_blank">
     <head>
         <meta charset="UTF-8" />
-        <title>素敵曜日 - Git Master - チェックアウト（check out）</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>素敵曜日 - Git Master - ワークツリー（worktree）</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
 
         <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
@@ -39,7 +39,7 @@
             
             <nav class="mainMenuList">
                 <menu>
-                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
@@ -53,20 +53,22 @@
             
             <menu id="menu">
                 <a class="button" href="./index.html">GitMaster</a>
-                <a class="button" href="./basic.html">基礎編</a>
+                <a class="button active" href="./basic.html">基礎編</a>
                 <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
                 <a class="subbutton" href="./repository.html">リポジトリ</a>
-                <a class="subbutton" href="./tag.html">タグ</a>
-                <a class="subbutton active" href="./commit.html">コミット</a>
+                <a class="subbutton" href="./commit.html">コミット</a>
+                <a class="subbutton" href="./worktree.html">ワークツリー</a>
+                <a class="subbutton" href="./basicIndex.html">インデックス</a>
                 <br />
             </menu>
             
             <!-- menu end -->
-            <h1 id="header_title">チェックアウト - checkout</h1>
+
+            <h1 id="header_title">ワークツリー - work tree</h1>
             <p id="header_description">
-                ここでは、Gitにおいての基礎、checkout（チェックアウト）のことを紹介していきます。
+            ここでは、Gitにおいて、ワークツリー - work tree について紹介していきます。
             </p>
-        
+
         </header>
         
         <hr />
@@ -78,8 +80,8 @@
         
         <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
 
-        <h3>チェックアウト</h3>
-        <a href="./checkOut.html#basic" alt="checkout" title="チェックアウト"><h2>checkout</h2></a>
+        <h3>ワークツリー</h3>
+        <a href="./basicWorktree.html" alt="work tree" title="ワークツリー"><h2>work tree</h2></a>
         
         <!-- subtitle end -->
         
@@ -87,32 +89,68 @@
         
         <!-- basic（基礎編） start -->
         <section id="basic">
-                <h1>basic（基礎編）</h1>
-                <article>
-                        <!-- 基礎編 - 説明// -->
-                    <h2>チェックアウト</h2>
-                    <p>
-                    </p>
-                </article>
-                <!--article>
-                    <p>
-                    </p>
-                </article//-->
+            <h1>basic（基礎編）</h1>
+            
+            <article>
+                <h2>ワークツリーとインデックス</h2>
+                <p>
+                    Gitでは、Gitの管理下に置かれた、みなさんが実際に作業をしているディレクトリのことをワークツリーと呼びます。<br />
+                    <br />
+                    そして、Gitではリポジトリとワークツリーの間にはインデックスというものが存在しています。インデックスとは、リポジトリにコミットする準備をするための場所のことです。
+                </p>
+            </article>
 
-<!--  code など start 
-                <article>
-<pre class="code">
-</pre>
-                </article>
+            <h3>work tree（ワークツリー）</h3>
+                    
+            <article>
+                <h4>ワークツリーとは</h4>
+                <p>Gitの管理下に置かれた作業をしているディレクトリ</p>
+            </article>
+            
+            <h3>index（インデックス）</h3>
+            
+            <article>
+                <h4>インデックスとは</h4>
+                <p>リポジトリにコミットする準備をするための場所</p>
+            </article>
+            
+            <article>
+                <h2>ワークツリーとインデックス</h2>
+                <p>
+                    Gitでは、コミットを実行した時にワークツリーから直接リポジトリ内に状態を記録するのでなく、その間に設けられているインデックスの設定された状態を記録するようになっています。<br/>
+                    そのため、コミットでファイルの状態を記録するためには、まずインデックスにファイルを登録する必要があります。
+                </p>
+            </article>
 
-                <article>
-                    <p>
-                    という形式でコメントを書きます。
-                    </p>
-                </article>
---  code など end -->
+            <article>
+                <p>
+                    このようにインデックスを間に挟むことで、ワークツリー内の必要ないファイルを含めずにコミットを行ったり、ファイルの一部の変更だけをインデックスに登録してコミットすることができます。                        
+                </p>
+            </article>
+            
+            <article class="comment">
+                <p>
+                    次から実戦でのチュートリアル<br />
+                    Gitをインストールして、実際にコミットをやってましょう！！
+                </p>
+            </article>
+            
         </section>
 <!-- basic（基礎編） end // -->
+
+        <!-- page nav start -->
+        
+        <nav id="basic_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./commit.html#basic">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./worktree.html#basic">「基礎編 - ワークツリーとインデックス」</a></span>
+                        
+                <span><a class="nextbutton" href="./basic.html#basicStart">「基礎編 - Gitの基本」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
 
 <!-- expansion（応用編） start // 
 <section id="expantion">
@@ -140,24 +178,23 @@
         <!-- ad end -->
         
         <!-- page nav start -->
-        <!-- TODO: チュートリアル機能がある場合 -->
+        
         <nav id="pagenav" style="width:80%">
         
-                <span><a class="prevbutton" href="./basicRepository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                <span><a class="prevbutton" href="./commit.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
                 
-                <span><a class="subbutton" href="./basicCommit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                <span><a class="subbutton" href="./worktree.html#basic">「基礎編 - ワークツリーとインデックス」</a></span>
                         
-                <span><a class="nextbutton" href="./basicWorktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                <span><a class="nextbutton" href="./basic.html#basicStart">「基礎編 - Gitの基本」に進む </a></span>
                         
         </nav>
 
         <!-- page nav end -->
-        
         <!-- page start -->
         
         <menu id="page">
             <span><a class="smallbutton" href="./index.html">Git Master</a></span>
-            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton active" href="./basic.html">basic</a></span>
             <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
             <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
             <span><a class="smallbutton" href="./reference.html">reference</a></span>
@@ -183,6 +220,7 @@
         </footer>
         
         <!-- footer end -->
+        
         
     </body>
 </html>

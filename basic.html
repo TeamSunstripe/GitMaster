@@ -71,39 +71,41 @@
             </p>
 
         </header>
-        
-        <hr />
-        
-        <!-- subtitle start-->
-        
-        <h3>基礎編</h3>
-        <a href="./basic.html" alt="basic" title="基礎編"><h2>basic</h2></a>
 
-        <!-- subtitle end -->
-        
         <hr />
         
         <!-- contents start -->
+        <main id="contents">
         
-        <section id="contents">
+        <!-- subtitle basic start-->
+        <nav>
+            <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+                
+            <h3>基礎編</h3>
+            <a href="./basic.html" alt="basic" title="基礎編"><h2>basic</h2></a>
+        </nav>
+        <!-- subtitle basic end -->
+        
+        <!-- basic（基礎編） start -->
+        <section id="basic">
             <h1>basic（基礎編）</h1>
 
             <article>
-                <a href="./basicGitVersion.html"><h4>Gitを使ったバージョン管理</h4></a>
+                <a href="./basicGitVersion.html#basic"><h4>Gitを使ったバージョン管理</h4></a>
                 <p>git によるバージョンを管理するよ</p>
-                <a href="./basicRepository.html"><h4>リポジトリ</h4></a>
+                <a href="./repository.html#basic"><h4>リポジトリ</h4></a>
                 <p>履歴を管理するもの</p>
-                <a href="./basicCommit.html"><h4>コミット</h4></a>
+                <a href="./commit.html#basic"><h4>コミット</h4></a>
                 <p>変更を記録するもの</p>
                 <h1 style="text-align: center;">ワークツリーとインデックス</h1>
-                <a href="./basicWorktree.html"><h4>ワークツリー</h4></a>
+                <a href="./worktree.html#basic"><h4>ワークツリー</h4></a>
                 <p>Gitの管理下に置かれた作業をしているディレクトリのこと</p>
-                <a href="./basicIndex.html"><h4>インデックス</h4></a>
+                <a href="./basicIndex.html#basic"><h4>インデックス</h4></a>
                 <p>リポジトリにコミットする準備をするための場所</p>
                 <h1 style="text-align: center;">変更履歴の統合</h1>
-                <a href="./basicMerge.html"><h4>マージ</h4></a>
+                <a href="./merge.html#basic"><h4>マージ</h4></a>
                 <p>変更履歴の統合</p>
-                <a href="./basicConflict.html"><h4>コンフリクト</h4></a>
+                <a href="./conflict.html#basic"><h4>コンフリクト</h4></a>
                 <p>競合の解決</p>
             </article>
 
@@ -111,39 +113,57 @@
 
             <article>
                 <p>チュートリアル</p>
-                <a href=""><h4>Gitのインストール</h4></a>
-                <a href=""><h4>初期設定</h4></a>
-                <a href=""><h4>新しいリポジトリを作成する</h4></a>
-                <a href=""><h4>ファイルをコミットする</h4></a>
-                <a href=""><h4>リポジトリの共有</h4></a>
-                <a href=""><h4>リモートリポジトリにプッシュする</h4></a>
-                <a href=""><h4>リモートリポジトリをクローンする</h4></a>
-                <a href=""><h4>リモートリポジトリからプルする</h4></a>
+                <a href="./basicGitInstall.html#setup"><h4>Gitのインストール</h4></a>
+                <a href="./basicGitSetting.html#setup"><h4>初期設定</h4></a>
+                <a href="./repository.html#setup"><h4>新しいリポジトリを作成する</h4></a>
+                <a href="./commit.html#setup"><h4>ファイルをコミットする</h4></a>
             </article>
 
-            <a name="repository" href="basicRepository.html"><h1>リポジトリの共有</h1></a>
+            <h1>リポジトリの共有</h1>
+            <article>
+                <a href="./repository.html"><h4>リポジトリの共有</h4></a>
+                <a href="./push.html#basic"><h4>リモートリポジトリにプッシュする</h4></a>
+                <a href="./clone.html#basic"><h4>リモートリポジトリをクローンする</h4></a>
+                <a href="./pull.html#basic"><h4>リモートリポジトリからプルする</h4></a>
+            </article>
+
+            <a name="repository" href="./basicRepository.html"><h1>リポジトリの共有</h1></a>
 
             <article>
                 <p>チュートリアル</p>
-                <a href=""><h4>リモートリポジトリを作成する</h4></a>
-                <a href=""><h4>リモートリポジトリにプッシュする</h4></a>
-                <a href=""><h4>リモートリポジトリをクローンする</h4></a>
-                <a href=""><h4>クローンしたリポジトリからプッシュする</h4></a>
-                <a href=""><h4>リモートリポジトリからプルする</h4></a>
+                <a href="./basicRepository.html#repository"><h4>リモートリポジトリを作成する</h4></a>
+                <a href="./push.html#repository"><h4>リモートリポジトリにプッシュする</h4></a>
+                <a href="./clone.html#repository"><h4>リモートリポジトリをクローンする</h4></a>
+                <a href="./push.html#clone"><h4>クローンしたリポジトリからプッシュする</h4></a>
+                <a href="./pull.html#repository"><h4>リモートリポジトリからプルする</h4></a>
             </article>
 
             <a name="merge" href="basicMerge.html"><h1>変更履歴の統合</h1></a>
             <article>
                 <p>チュートリアル</p>
-                <a href=""><h4>競合状態でプッシュする</h4></a>
-                <a href=""><h4>競合を解決する</h4></a>
+                <a href="./push.html#confrict"><h4>競合状態でプッシュする</h4></a>
+                <a href="./confrict.html"><h4>競合を解決する</h4></a>
             </article>
 
         </section>
+<!-- basic（基礎編） end // -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
         
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
-        
-        <hr style="clear:both;"/>
+
+    <hr style="clear:both;"/>
         
         <!-- ad start -->
         
@@ -153,6 +173,19 @@
         
         <!-- ad end -->
         
+        <!-- page nav start -->
+        
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./index.html">「HOME」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basic.html">「基礎編」</a></span>
+                        
+                <span><a class="nextbutton" href="./basicStart.html">「基礎編 - はじめに」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
         <!-- page start -->
         
         <menu id="page">

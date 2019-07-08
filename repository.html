@@ -64,32 +64,33 @@
             <!-- menu end -->
             <h1 id="header_title">repository</h1>
             <p id="header_description">
-            ここでは、Gitにおいての用語、repository（リポジトリ）のことを紹介していきます。
+            ここでは、Gitにおいての基礎、repository（リポジトリ）のことを紹介していきます。
             </p>
 
         </header>
         
         <hr />
         
-        <!-- subtitle start-->
+        <!-- contents start -->
+        <main id="contents">
         
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
         <h3>リポジトリ</h3>
         <a href="./repository.html#basic" alt="repository" title="リポジトリ"><h2>repository</h2></a>
         
-        <!-- subtitle end -->
+        <!-- subtitle basic end -->
         
         <hr />        
 
-        
-        <!-- contents start -->
-        
-        <section id="contents">
-            
-            <h1>repository（リポジトリ）</h1>
-            
+        <!-- basic（基礎編） start -->
+        <section id="basic">
+            <!-- basic（基礎編） // -->
+            <h1>basic（基礎編）</h1>
             <article>
-                <h3>リポジトリとは</h3>
-                <h4>ファイルやディレクトリの状態を記録する場所</h4>
+                <h3>ファイルやディレクトリの状態を記録するレポジトリ</h3>
                 <p>
                     保存された状態は、内容の変更履歴として格納されています。<br />
                     具体的に、ひとつのソフトウェアやプロダクトから分岐させて、複数のメンバーが同時に機能追加や、バグ修正を行うなどします。<br />
@@ -104,17 +105,23 @@
                     </p>
             </article>
 
+            <a href="./remoteRepository.html"><h3>remote repository</h3></a>
             <article>
-            <h2>リモートリポジトリ</h2>
-            <p>
-                専用のサーバに配置して複数人で共有するためのリポジトリです。
-            </p>
-                <h2>ローカルリポジトリ</h2>
+                <h4>リモートリポジトリ</h4>
                 <p>
-                    ユーザ一人ひとりが利用するために、自分の手元のマシン上に配置するリポジトリです。<br />
-                    リポジトリをリモートとローカルの2種類に分けることで、普段の作業はローカルリポジトリを使って全て手元のマシン上で行うことができます。<br />
-                    自分のローカルリポジトリで作業した内容を公開したい時は、リモートリポジトリにアップロードして公開します。また、リモートリポジトリを通してほかの人の作業内容を取得することもできます。<br />
+                    専用のサーバに配置して複数人で共有するためのリポジトリです。
                 </p>
+                
+            </article>
+
+            <a href="./localRepository.html"><h3>local repository</h3></a>
+            <article>
+                    <h4>ローカルリポジトリ</h4>
+                    <p>
+                        ユーザ一人ひとりが利用するために、自分の手元のマシン上に配置するリポジトリです。<br />
+                        リポジトリをリモートとローカルの2種類に分けることで、普段の作業はローカルリポジトリを使って全て手元のマシン上で行うことができます。<br />
+                        自分のローカルリポジトリで作業した内容を公開したい時は、リモートリポジトリにアップロードして公開します。また、リモートリポジトリを通してほかの人の作業内容を取得することもできます。<br />
+                    </p>
             </article>
 
             <article>
@@ -125,9 +132,192 @@
                         一つ目は全く新しいリポジトリを作成する方法、二つ目はリモートリポジトリをコピーして作成する方法です。<br />
                     </p>
             </article>
+            
+            <article class="comment">
+                <p>
+                        次のページではコミットについて説明
+                </p>
+            </article>
 
         </section>
+
+        <!-- basic page nav start -->
         
+        <nav id="basic_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicStart.html#basic">「基礎編 - はじめに」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./repository.html#basic">「基礎編 - 履歴を管理するリポジトリ」</a></span>
+                        
+                <span><a class="nextbutton" href="./commit.html#basic">「基礎編 - 変更を記録するコミット」に進む </a></span>
+                        
+        </nav>
+
+        <!-- basic page nav end -->
+
+<!-- basic（基礎編） end // -->
+
+<!-- setup（setup編） start // -->
+<section id="setup">
+
+        <!-- subtitle start-->
+        
+        <a name="setup" class="tagbutton" href="./basicStart.html">setup編</a>
+
+        <h3>リポジトリ</h3>
+        <a href="./repository.html#setup" alt="repository" title="リポジトリ"><h2>repository</h2></a>
+        
+        <!-- subtitle end -->
+
+        <h2>チュートリアル1 Gitの基本</h2>
+        <article class="comment">
+                <h3>リポジトリを作成</h3>
+                <p>
+                        それでは、新しいリポジトリをローカルに作成します。ここでは、「tutorial」という名前で空のディレクトリを作成して、Gitの管理下に置きましょう。
+                <br />
+                        以降のチュートリアルでもこのディレクトリを使って進めていきます。
+                    </p>
+                お使いのパソコンの環境を選んでください。
+                </article>
+                    
+                <article>
+                        <h3>コンソール</h3>
+                        <p>
+                            まずはtutorialディレクトリを好きな所に作成してください。
+                            <br />
+                            tutorialディレクトリをGitの管理下にするには、そのディレクトリに移動してinitコマンドを使用します。
+                        </p>
+                        <p>
+                        http://git-scm.com/
+                        </p>
+                </article>
+
+                <article>
+<pre class="code">
+$ git init
+</pre>
+<p>
+        ここでは、新しく作成したtutorialディレクトリをGitリポジトリに設定しました。
+</p>          
+                </article>
+
+                <article>
+<pre class="code">
+$ mkdir tutorial
+$ cd tutorial
+$ git init
+Initialized empty Git repository
+in /Users/yourname/Desktop/tutorial/.git/
+</pre>
+                </article>
+        
+                    <article class="comment">
+                            <p>
+                                次は、このリポジトリにファイルをコミットしましょう
+                            </p>
+                        </article>
+        
+                    </section>
+<!-- setup（setup編） end // -->
+
+<!-- setup page nav start -->
+        
+    <nav id="setup_page_nav" style="width:80%">
+        
+        <span><a class="prevbutton" href="./basicGitSetting.html#setup">「setup編 - Gitの初期設定」に戻る </a></span>
+
+        <span><a class="subbutton" href="./repository.html#setup">「setup編 - Gitのリポジトリを作成」</a></span>
+
+        <span><a class="nextbutton" href="./commit.html#setup">「setup編 - Gitのリポジトリにコミット」に進む </a></span>
+                
+    </nav>
+
+<!-- setup page nav end -->
+
+<!-- repository共有（repository編） start // -->
+<section id="repository">
+
+        <!-- subtitle start-->
+        
+        <a name="repository" class="tagbutton" href="./basicStart.html#repository">repository編</a>
+
+        <h3>リポジトリ</h3>
+        <a href="./repository.html#repository" alt="repository" title="リポジトリ"><h2>repository</h2></a>
+        
+        <!-- subtitle end -->
+
+        <h2>チュートリアル2 リポジトリの共有</h2>
+        <article class="comment">
+            <h3>リポジトリを作成</h3>
+                <p>
+                    リモートリポジトリをBacklog上に作成する
+                    <br />
+                    まずはリモートリポジトリをBacklog上に作成しましょう。
+                </p>
+        </article>
+
+        <article>
+            <h3>Note</h3>
+            <p>
+                        Backlogでは、管理者権限のあるユーザからでないとGitリポジトリの作成ができません。自分のユーザが管理者権限を持っていない場合は、管理者権限を持っている方に頼んでリポジトリを作成してもらってください。または、フリープランのBacklogスペースを取得してご利用ください。
+                    </p>
+                </article>
+                    
+                <article>
+                        <h3>コンソール</h3>
+                        <p>
+                                スペースの取得はこちら
+                                まずは、Backlogにログインし、リポジトリを作成するプロジェクトのメニューから「Git」をクリックします。プロジェクトがまだ一つもない場合はプロジェクトを作成してください。
+                        </p>
+                        <p>
+                                Gitの項目が表示されていない場合は、Git機能を有効にするプロジェクトを選択し、「プロジェクト設定」 > 「Gitの設定」で、Git機能を有効にします。
+                        </p>
+                        <p>
+                                Git機能を有効にしたら、同じくGitの設定画面より「リポジトリを追加する」をクリックします。
+                        </p>
+                        <p>
+                                「リポジトリ名」と「説明」を入力して「リポジトリを作成する」ボタンをクリックします。ここでは、名前に「tutorial」、説明に「チュートリアル用です」と入力しました。
+                        </p>
+                        <p>
+                                次の図のように、新しいリポジトリが追加されました。
+                        </p>
+                        <p>
+                                次はこのリモートリポジトリにプッシュするばい！
+                        </p>
+                </article>
+        
+            </section>
+<!-- repository（repository編） end // -->
+
+        <!-- repository page nav start -->
+        
+        <nav id="repository_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicGitSetting.html#repository">「repository編 - レポジトリの共有」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./repository.html#repository">「setup編 - リモートリポジトリをBacklog上に作成する」</a></span>
+                        
+                <span><a class="nextbutton" href="./commit.html#repository">「setup編 - Gitのリポジトリにコミット」に進む </a></span>
+                        
+        </nav>
+
+<!-- repository page nav end -->
+
+
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
         
         <hr style="clear:both;"/>
@@ -139,7 +329,7 @@
         </div>
         
         <!-- ad end -->
-        
+
         <!-- page start -->
         
         <menu id="page">

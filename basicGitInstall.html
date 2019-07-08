@@ -2,8 +2,8 @@
 <html lang="ja" target="_blank">
     <head>
         <meta charset="UTF-8" />
-        <title>素敵曜日 - Git Master - チェックアウト（check out）</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>素敵曜日 - Git Master - 基礎編 - Gitのインストール</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
 
         <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
@@ -42,8 +42,8 @@
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
-                    <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
-                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./reference.html">reference</a></li>
                 </menu>
             </nav>
             
@@ -53,20 +53,22 @@
             
             <menu id="menu">
                 <a class="button" href="./index.html">GitMaster</a>
-                <a class="button" href="./basic.html">基礎編</a>
+                <a class="button active" href="./basic.html">基礎編</a>
                 <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
-                <a class="subbutton" href="./repository.html">リポジトリ</a>
-                <a class="subbutton" href="./tag.html">タグ</a>
-                <a class="subbutton active" href="./commit.html">コミット</a>
+                <a class="subbutton" href="./basicRepository.html">リポジトリ</a>
+                <a class="subbutton" href="./basicCommit.html">コミット</a>
+                <a class="subbutton" href="./basicWorktree.html">ワークツリー</a>
+                <a class="subbutton" href="./basicIndex.html">インデックス</a>
                 <br />
             </menu>
             
             <!-- menu end -->
-            <h1 id="header_title">チェックアウト - checkout</h1>
+
+            <h1 id="header_title">Gitのインストール</h1>
             <p id="header_description">
-                ここでは、Gitにおいての基礎、checkout（チェックアウト）のことを紹介していきます。
+            ここでは、Gitのインストールについて紹介していきます。
             </p>
-        
+
         </header>
         
         <hr />
@@ -78,8 +80,8 @@
         
         <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
 
-        <h3>チェックアウト</h3>
-        <a href="./checkOut.html#basic" alt="checkout" title="チェックアウト"><h2>checkout</h2></a>
+        <h3>Gitのインストール</h3>
+        <a href="./basicGitInstall.html" alt="git install" title="Gitのインストール"><h2>git install</h2></a>
         
         <!-- subtitle end -->
         
@@ -87,32 +89,79 @@
         
         <!-- basic（基礎編） start -->
         <section id="basic">
-                <h1>basic（基礎編）</h1>
+            <h1>basic（基礎編）</h1>
+            
+            <article class="comment">
+                <h2>チュートリアル1 Gitの基本</h2>
+                <p>
+                    開発者の人、コンソールに慣れとる人は、コンソールでGitにチャレンジしてみてね
+                </p>
+                お使いのパソコンの環境を選んでください。
+            </article>
+                
                 <article>
-                        <!-- 基礎編 - 説明// -->
-                    <h2>チェックアウト</h2>
-                    <p>
-                    </p>
+                        <h3>コンソール</h3>
+                        <p>
+                                Gitをコンソール上から利用したい方は、GitのWebサイトからGitのインストーラをダウンロードしてきてインストールします。
+                        </p>
+                        <p>
+                        http://git-scm.com/
+                        </p>
                 </article>
-                <!--article>
-                    <p>
-                    </p>
-                </article//-->
-
-<!--  code など start 
+            
                 <article>
+                        <h3>Note</h3>
+                        <p>
+                                Macの場合、MacPortsやHomebrewといったパッケージ管理ツールを使ってインストールすることもできます。
+                            </p>
+                </article>
+
+                <article>
+                        <h3>Windows</h3>
+                        <p>
+                                インストールしたら、スタートメニュー > すべてのプログラム > Git > Git Bashを起動します。
+                            </p>
+                </article>
+            
+                <article>
+                        <h3>Mac</h3>
+                        <p>
+                                インストールしたら、アプリケーション/ユーティリティの中にあるターミナルを起動します。
+                            </p>
+                </article>
+            
+                <article>
+                        <h3>確 認</h3>
+                        <p>
+                                確認のためにversionコマンドを実行してみましょう。Gitのバージョンが表示されればインストールは成功です。出力される文字列はインストールした環境やバージョンによって異なる場合があります。
+                            </p>
 <pre class="code">
+$ git --version
+git version 1.7.7.5 (Apple Git-26)
 </pre>
                 </article>
-
-                <article>
-                    <p>
-                    という形式でコメントを書きます。
-                    </p>
-                </article>
---  code など end -->
+            
+                    <article class="comment">
+                            <p>
+                                    次は、初期設定を行うよ！！
+                            </p>
+                        </article>
         </section>
 <!-- basic（基礎編） end // -->
+
+        <!-- setup page nav start -->
+        
+        <nav id="setup_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basic.html#basicStart">「基礎編 - Gitの基本」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basicGitInstall.html#setup">「基礎編 - Gitのインストール」</a></span>
+                        
+                <span><a class="nextbutton" href="./basicGitSetting.html#setup">「基礎編 - Gitの初期設定」に進む </a></span>
+                        
+        </nav>
+
+        <!-- setup page nav end -->
 
 <!-- expansion（応用編） start // 
 <section id="expantion">
@@ -140,24 +189,23 @@
         <!-- ad end -->
         
         <!-- page nav start -->
-        <!-- TODO: チュートリアル機能がある場合 -->
+        
         <nav id="pagenav" style="width:80%">
         
-                <span><a class="prevbutton" href="./basicRepository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                <span><a class="prevbutton" href="./basic.html#basicStart">「基礎編 - Gitの基本」に戻る </a></span>
                 
-                <span><a class="subbutton" href="./basicCommit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                <span><a class="subbutton" href="./basicGitInstall.html#setup">「基礎編 - Gitのインストール」</a></span>
                         
-                <span><a class="nextbutton" href="./basicWorktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                <span><a class="nextbutton" href="./basicGitSetting.html#setup">「基礎編 - Gitの初期設定」に進む </a></span>
                         
         </nav>
 
         <!-- page nav end -->
-        
         <!-- page start -->
         
         <menu id="page">
             <span><a class="smallbutton" href="./index.html">Git Master</a></span>
-            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton active" href="./basic.html">basic</a></span>
             <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
             <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
             <span><a class="smallbutton" href="./reference.html">reference</a></span>
@@ -183,6 +231,7 @@
         </footer>
         
         <!-- footer end -->
+        
         
     </body>
 </html>

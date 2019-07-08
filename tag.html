@@ -13,7 +13,7 @@
     
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).tag(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
          
@@ -62,26 +62,72 @@
             </menu>
             
             <!-- menu end -->
-            <h1>基礎編 - basic</h1>
+            <h1 id="header_title">タグ - tag</h1>
+            <p id="header_description">
+                ここでは、Gitにおいての基礎、tag（タグ）のことを紹介していきます。
+            </p>
+        
         </header>
         
         <hr />
         
-        <!-- subtitle start-->
+        <!-- contents start -->
+        <main id="contents">
+
+        <!-- subtitle basic start-->
         
-        <h3>基礎編</h3>
-        <h2>basic</h2>
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>タグ</h3>
+        <a href="./tag.html#basic" alt="tag" title="タグ"><h2>tag</h2></a>
         
-        <!-- subtitle end -->
+        <!-- subtitle basic end -->
         
         <hr />
         
         <!-- contents start -->
         
-        <div id="contents">
-            <h1>basic（基礎編）</h1>
-        </div>
+        <section id="basic">
+                <h1>basic（基礎編）</h1>
+                <article>
+                    <!-- 基礎編 - 説明// -->
+                    <h2>タグ</h2>
+                    <p>
+                    </p>
+                </article>
+                <!--article>
+                    <p>
+                    </p>
+                </article//-->
+
+<!--  code など start 
+                <article>
+<pre class="code">
+</pre>
+                </article>
+
+                <article>
+                    <p>
+                    という形式でコメントを書きます。
+                    </p>
+                </article>
+--  code など end -->
+        </section>
+<!-- basic（基礎編） end // -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
         
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
         
         <hr style="clear:both;"/>
@@ -93,6 +139,20 @@
         </div>
         
         <!-- ad end -->
+        
+        <!-- page nav start -->
+        <!-- TODO: チュートリアル機能がある場合 -->
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./worktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
         
         <!-- page start -->
         
@@ -124,7 +184,6 @@
         </footer>
         
         <!-- footer end -->
-        
         
     </body>
 </html>

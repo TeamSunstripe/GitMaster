@@ -126,6 +126,20 @@
         </section>
 <!-- basic（基礎編） end // -->
 
+        <!-- basic page nav start -->
+        
+        <nav id="pagenav" style="width:80%">
+        
+            <span><a class="prevbutton" href="./repository.html#basic">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+            
+            <span><a class="subbutton" href="./commit.html#basic">「基礎編 - 変更を記録するコミット」</a></span>
+                    
+            <span><a class="nextbutton" href="./worktree.html#basic">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                    
+    </nav>
+
+    <!-- basic page nav end -->
+
 <!-- setup（setup編） start // -->
 <section id="setup">
 
@@ -175,7 +189,7 @@ $ git status
 # Initial commit
 #
 # Untracked files:
-#   (use "git add &li;file&gi;..." to include in what will be committed)
+#   (use "git add <file>..." to include in what will be committed)
 #
 #     sample.txt
 </pre>
@@ -188,10 +202,10 @@ $ git status
 
         <article>
                 <p>
-                    ファイルをインデックスに登録するにはaddコマンドを使用します。<file>はインデックスに登録するファイルを指定します。スペース区切りで複数指定することもできます。
+                    ファイルをインデックスに登録するにはaddコマンドを使用します。&lt;file&gt;はインデックスに登録するファイルを指定します。スペース区切りで複数指定することもできます。
                 </p>
 <pre class="code">
-$ git add &li;file&gi;..
+$ git add <file>
 </pre>
                 <p>
                     パラメータに「.」を指定すると、すべてのファイルをインデックスに登録することができます。
@@ -210,7 +224,7 @@ $ git status
 # Initial commit
 #
 # Changes to be committed:
-#   (use "git rm --cached &li;file&gi;..." to unstage)
+#   (use "git rm --cached &lt;file&gt;..." to unstage)
 #
 #     new file:   sample.txt
 #
@@ -220,7 +234,7 @@ $ git status
                 </p>
 
 <pre class="code">
-$ git commit -m "&li;コメント&gi;"
+$ git commit -m "&lt;file&gt;"
 </pre>
                 <p>
                     commitコマンドを実行してから状態を確認します。

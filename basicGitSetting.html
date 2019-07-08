@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - 基礎編 - Gitの初期設定</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
+    <body>
+        <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./reference.html">reference</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button active" href="./basic.html">基礎編</a>
+                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                <a class="subbutton" href="./basicRepository.html">リポジトリ</a>
+                <a class="subbutton" href="./basicCommit.html">コミット</a>
+                <a class="subbutton" href="./basicWorktree.html">ワークツリー</a>
+                <a class="subbutton" href="./basicIndex.html">インデックス</a>
+                <br />
+            </menu>
+            
+            <!-- menu end -->
+
+            <h1 id="header_title">Gitの初期設定</h1>
+            <p id="header_description">
+            ここでは、Gitの初期設定について紹介していきます。
+            </p>
+
+        </header>
+        
+        <hr />
+        
+        <!-- contents start -->
+        <main id="contents">
+        
+        <!-- subtitle start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>Gitの初期設定</h3>
+        <a href="./basicGitSetting.html" alt="git setting" title="Gitの初期設定"><h2>git setting</h2></a>
+        
+        <!-- subtitle end -->
+        
+        <hr />
+        
+        <!-- basic（基礎編） start -->
+        <section id="basic">
+            <h1>basic（基礎編）</h1>
+            
+            <article class="comment">
+                <h2>チュートリアル1 Gitの基本</h2>
+                <p>
+                        お使いのパソコンの環境を選んでください。
+                    <br />
+                        インストールしたGitに対して、自分のユーザ名とメールアドレスを登録しましょう。この作業はインストール後の一回だけ行えば大丈夫です。 これは、リポジトリに対してコミットした人の情報として履歴などに表示されます。
+                </p>
+                お使いのパソコンの環境を選んでください。
+            </article>
+                
+                <article>
+                        <h3>コンソール</h3>
+                        <p>
+                                gitの設定はユーザのホームディレクトリに作成される.gitconfigファイルに記録されています。直接ファイルを編集することもできますが、ここでは、configコマンドを使って設定を行います。
+                        </p>
+                        http://git-scm.com/
+                </article>
+            
+                <article>
+<pre class="code">
+$ git config --global user.name "<ユーザ名>"
+$ git config --global user.email "<メールアドレス>"
+</pre>
+                        <p>
+                            次のコマンドで、gitの出力をカラーリングすることができます。 
+                        </p>
+                </article>
+
+                <article>
+<pre class="code">
+$ git config --global color.ui auto
+</pre>
+                <p>
+                    gitのコマンドにはエイリアスを設定することが出来ます。
+                    次のコマンドでは、「checkout」を「co」と省略しても実行できるようになります。
+                </p>
+                </article>
+
+                <article>
+<pre class="code">
+$ git config --global alias.co checkout
+</pre>
+                        <h3>Note</h3>
+                        <p>
+                                Windowsでコンソール(Git Bash)をお使いの場合、日本語を含むファイル名が "\346\226\260\350\246..." といった形式で表示されてしまいます。下記の設定を追加すると、日本語を含んだファイル名も正しく表示されるようになります。
+                            </p>
+                </article>
+
+                <article>
+<pre class="code">
+$ git config --global core.quotepath off
+</pre>
+                        <p>
+                            また、Windowsでコンソールをお使いの場合、日本語入力をすることができません。そのため、コミットメッセージで日本語を使用する場合は-mオプションは使用せずに、外部エディタで入力する必要があります。
+                        <br />
+                        使用する外部エディタは文字コードUTF-8と改行コードLFに対応している必要があります。                        
+                        </p>
+                </article>
+            
+                <article>
+<pre class="code">
+git config --global core.editor "\"[使用するエディタのパス]\""dewfr
+</pre>
+                </article>
+            
+                <article class="comment">
+                    <p>
+                        これでセットアップは終了です。
+                        <br />
+                        次のページでリポジトリを作成していきましょう。
+                    </p>
+                </article>
+
+        </section>
+<!-- basic（基礎編） end // -->
+
+        <!-- setup page nav start -->
+        
+        <nav id="setup_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicGitInstall.html#setup">「基礎編 - Gitのインストール」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basicGitSetting.html#setup">「基礎編 - Gitの初期設定」</a></span>
+                        
+                <span><a class="nextbutton" href="./repository.html#setup">「基礎編 - Gitのリポジトリを作成」に進む </a></span>
+                        
+        </nav>
+
+        <!-- setup page nav end -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
+        <!-- contents end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page nav start -->
+        
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicGitInstall.html#setup">「基礎編 - Gitのインストール」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basicGitSetting.html#setup">「基礎編 - Gitの初期設定」</a></span>
+                        
+                <span><a class="nextbutton" href="./basicRepository.html#setup">「基礎編 - Gitのリポジトリを作成」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
+        <!-- page start -->
+        
+        <menu id="page">
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton active" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
+        </menu>
+        
+        <!-- page end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- footer start -->
+        
+        <footer>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+        
+        <!-- footer end -->
+        
+        
+    </body>
+</html>
