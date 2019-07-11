@@ -2,6 +2,9 @@
 title 素敵曜日GitMaster
 description 素敵曜日 GitMaster - Gitに詳しくなろう
 
+# site url
+http://sunstripe.main.jp/GitMaster/
+
 ## サンストライプ：メンバー
 * 大島 曜
 
