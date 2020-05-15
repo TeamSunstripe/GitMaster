@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - コミット（commit）</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
+    
+    <body>
+        <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button active" href="./basic.html">基礎編</a>
+                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                <a class="subbutton" href="./repository.html">リポジトリ</a>
+                <a class="subbutton" href="./tag.html">タグ</a>
+                <a class="subbutton" href="./commit.html">コミット</a>
+                <br />
+            </menu>
+            
+            <!-- menu end -->
+            <h1 id="header_title">コミット - commit</h1>
+            <p id="header_description">
+                ここでは、Gitにおいて、commit（コミット）のことを紹介していきます。
+            </p>
+        
+        </header>
+        <!-- contents start -->
+        <main id="contents">
+        
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>コミット</h3>
+        <a href="./commit.html#basic" alt="commit" title="コミット"><h2>commit</h2></a>
+        
+        <!-- subtitle basic end -->
+        
+        <hr />
+        
+        <!-- basic（基礎編） start -->
+        <section id="basic">
+            <!-- basic（基礎編） // -->
+            <h1>basic（基礎編）</h1>
+            <article>
+                <h2>変更を記録するコミット</h2>
+                <p>
+                    ファイルやディレクトリの追加・変更を、リポジトリに記録するにはコミットという操作を行います。<br />
+                    コミットを実行すると、リポジトリの内では、前回コミットした時の状態から現在の状態までの差分を記録したコミット(またはリビジョン)と呼ばれるものが作成されます。<br/>
+                    このコミットは、次の図のように時系列順につながった状態でリポジトリに格納されています。このコミットを最新の物から辿ることで、過去の変更履歴やその内容を知ることができるようになっています。
+                </p>
+            </article>
+            <article>
+                <p>
+                    これらのコミットには、コミットの情報から計算された重複のない英数字40桁の名前が付けられています。この名前を指定することで、リポジトリの中からコミットを指定することができます。<br />
+                    バグ修正や機能追加などの異なる意味を持つ変更は、できるだけ分けてコミットするようにしましょう。後から履歴を見て特定の変更内容を探す時に探しやすくなります。<br />
+                    コミットの実行時にはコミットメッセージの入力を求められます。コミットメッセージは必須となっているため、空のままで実行するとコミットが失敗します。<br />
+                </p>
+            </article>
+            <article>
+                <p>
+                    コミットメッセージは、他の人がコミットの変更内容を調べる場合や、自分で後から履歴を見直す際に大切な情報となるので、変更内容のわかりやすいコメントを書くように心がけましょう。 Gitでは標準的に
+                </p>
+            </article>
+
+<!--  code など start -->
+<article>
+<pre class="code">
+1行目 : コミットでの変更内容の要約
+2行目 : 空行
+3行目以降 : 変更した理由
+        </pre>
+</article>
+        
+<article>
+    <p>
+        という形式でコメントを書きます。
+    </p>
+</article>
+<!--  code など end -->
+        </section>
+<!-- basic（基礎編） end // -->
+
+        <!-- basic page nav start -->
+        
+        <nav id="pagenav" style="width:80%">
+        
+            <span><a class="prevbutton" href="./repository.html#basic">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+            
+            <span><a class="subbutton" href="./commit.html#basic">「基礎編 - 変更を記録するコミット」</a></span>
+                    
+            <span><a class="nextbutton" href="./worktree.html#basic">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                    
+    </nav>
+
+    <!-- basic page nav end -->
+
+<!-- setup（setup編） start // -->
+<section id="setup">
+
+        <!-- subtitle start-->
+        
+        <a name="setup" class="tagbutton" href="./basicStart.html">setup編</a>
+
+        <h3>コミット</h3>
+        <a href="./commit.html#setup" alt="commit" title="コミット"><h2>commit</h2></a>
+        
+        <!-- subtitle end -->
+
+        <h2>チュートリアル1 Gitの基本</h2>
+        <article class="comment">
+                <h3>ファイルをコミットする</h3>
+                <p>
+                        tutorialディレクトリに新しいファイルを追加して、リポジトリにファイルを登録してみましょう。
+                        <br />
+                        まずは、tutorialディレクトリの中に「sample.txt」という名前でテキストファイルを作成してください。ファイルの内容には、次のテキストを入力してください。
+                </p>
+                お使いのパソコンの環境を選んでください。
+                </article>
+        
+                <h4>Gitコマンド</h4>
+
+                <article>
+                        <h3>コンソール</h3>
+                        <p>
+                            Gitの管理下にあるディレクトリの、ワークツリーとインデックスの状態を確認するにはstatusコマンドを使用します。
+                        </p>
+                </article>
+
+                <article>
+<pre class="code">
+        $ git status
+</pre>
+<p>
+    statusコマンドを実行してtutorialディレクトリの状態を確認します。
+</p>          
+                </article>
+
+                <article>
+<pre class="code">
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#     sample.txt
+</pre>
+        <p>
+        nothing added to commit but untracked files present (use "git add" to track)
+        <br />
+        履歴の追跡対象になっていないファイルとして、sample.txtがあります。一度インデックスに登録すると、追跡対象に登録することができます。
+        </p>
+        </article>
+
+        <article>
+                <p>
+                    ファイルをインデックスに登録するにはaddコマンドを使用します。&lt;file&gt;はインデックスに登録するファイルを指定します。スペース区切りで複数指定することもできます。
+                </p>
+<pre class="code">
+$ git add <file>
+</pre>
+                <p>
+                    パラメータに「.」を指定すると、すべてのファイルをインデックスに登録することができます。
+                </p> 
+<pre class="code">
+$ git add .
+</pre>
+<p>
+    それでは、sample.txtをインデックスに追加して確認してみます。
+</p> 
+<pre class="code">
+$ git add sample.txt
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached &lt;file&gt;..." to unstage)
+#
+#     new file:   sample.txt
+#
+</pre>
+                <p>
+                    インデックスにsample.txtが追加され、コミットの準備が整いました。 次はcommitコマンドを実行してコミットします。commitコマンドのフォーマットは次のとおりです。
+                </p>
+
+<pre class="code">
+$ git commit -m "&lt;file&gt;"
+</pre>
+                <p>
+                    commitコマンドを実行してから状態を確認します。
+                </p>
+<pre class="code">
+$ git commit -m "first commit"
+[master (root-commit) 116a286] first commit
+0 files changed, 0 insertions(+), 0 deletions(-)
+create mode 100644 sample.txt
+</pre>
+<pre class="code">
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+</pre>
+                <p>
+                    これで、コミットされていない変更はなくなりました。
+                </p>
+                <p>
+                        リポジトリの変更履歴を確認してみましょう。リポジトリの変更履歴を表示するにはlogコマンドを使用します。
+                </p>
+<pre class="code">
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+</pre>
+</article>
+
+<article>
+<h4>Note</h4> 
+<p>
+    gitをインストールすると、gitkというツールも同時にインストールされています。これを使用すると、変更履歴をGUIで確認することもできます。
+</p>
+<pre class="code">
+$ gitk
+</pre>
+        
+        </article>
+
+<article class="comment">
+    <p>
+        次は、リポジトリをみんなで共有する方法について説明いたします。
+    </p>
+</article>
+        
+                    </section>
+<!-- setup（setup編） end // -->
+
+        <!-- setup page nav start -->
+        
+        <nav id="setup_page_nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicRepository.html#setup">「基礎編 - Gitのリポジトリを作成」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html#setup">「基礎編 - Gitのリポジトリにコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./push.html#setup">「基礎編 - Gitのリポジトリにコミット」に進む </a></span>
+                        
+        </nav>
+
+        <!-- setup page nav end -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
+        <!-- contents end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page nav start -->
+        
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./basicRepository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./basicCommit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./basicWorktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
+        
+        <!-- page start -->
+        
+        <menu id="page">
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton active" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
+        </menu>
+        
+        <!-- page end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- footer start -->
+        
+        <footer>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+        
+        <!-- footer end -->
+        
+        
+    </body>
+</html>

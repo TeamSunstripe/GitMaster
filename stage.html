@@ -2,10 +2,10 @@
 <html lang="ja" target="_blank">
     <head>
         <meta charset="UTF-8" />
-        <title>素敵曜日 - Git Master - Git Flow - hotfix</title>
-        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <title>素敵曜日 - Git Master - ステージ（stage）</title>
+        <meta name="robots" content="noindex, nofollow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
-        
+
         <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
         <style>
             </style>
@@ -41,12 +41,9 @@
                 <menu>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="./master.html">master</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="./release.html">release</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="./develop.html">develop</a></li>
-                    <li class="mainMenuList"><a class="mainMenu" href="./feature.html">feature</a></li>
-                    <li class="mainMenuList"><a class="mainMenu selected" href="./hotfix.html">hotfix</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
                 </menu>
             </nav>
             
@@ -55,50 +52,66 @@
             <!-- menu start -->
             
             <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
                 <a class="button" href="./basic.html">基礎編</a>
-                <a class="subbutton" href="./branch.html">ブランチ</a> 
-                <a class="button" href="./expansion.html">応用編</a>
-                <a class="subbutton" href="./gitFlow.html">Git Flow</a>
-                <a class="subbutton active" href="./hotfix.html">hotfix</a> 
+                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                <a class="subbutton" href="./repository.html">リポジトリ</a>
+                <a class="subbutton" href="./tag.html">タグ</a>
+                <a class="subbutton active" href="./commit.html">コミット</a>
                 <br />
             </menu>
             
             <!-- menu end -->
-            
-            <h1 id="header_title">Git Flow - hotfix</h1>
+            <h1 id="header_title">ステージ - stage</h1>
             <p id="header_description">
-            ここでは、GitFlowにおいて、hotfixブランチ - hotfixについて紹介していきます。
+                ここでは、Gitにおいての基礎、stage（ステージ）のことを紹介していきます。
             </p>
-
+        
         </header>
         
         <hr />
         
         <!-- contents start -->
         <main id="contents">
-        
-        <!-- subtitle start-->
-        
-        <h3>Git Flow</h3>
-        <a href="./hotfix.html" alt="hotfix" title="緊急用 開発ブランチ"><h2>hotfix（緊急開発ブランチ）</h2></a>
 
-        <!-- subtitle end -->
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>ステージ</h3>
+        <a href="./stage.html#basic" alt="checkout" title="ステージ"><h2>stage</h2></a>
+        
+        <!-- subtitle basic end -->
         
         <hr />
         
         <!-- contents start -->
         
         <section id="basic">
-            <h1>hotfixブランチ</h1>（必須）
-            
-            <h3>命名規則</h3>
-            ・hotfix/[バージョン番号]/[バグ識別名]<br />
-            ・hotfix/[バグ識別名]<br />
-            <h3>説明</h3>
-            <p>
-                リリースされているデータに、緊急の修正対応で使用<br />
-                唯一<a href="master.html">master</a>ブランチに急遽修正を行うときに用いる
-            </p>
+                <h1>basic（基礎編）</h1>
+                <article>
+                    <!-- 基礎編 - 説明// -->
+                    <h2>ステージ</h2>
+                    <p>
+                    </p>
+                </article>
+                <!--article>
+                    <p>
+                    </p>
+                </article//-->
+
+<!--  code など start 
+                <article>
+<pre class="code">
+</pre>
+                </article>
+
+                <article>
+                    <p>
+                    という形式でコメントを書きます。
+                    </p>
+                </article>
+--  code など end -->
         </section>
 <!-- basic（基礎編） end // -->
 
@@ -117,7 +130,7 @@
         </main>
         <!-- contents end -->
         
-        <hr style="clear:both;" />
+        <hr style="clear:both;"/>
         
         <!-- ad start -->
         
@@ -127,17 +140,33 @@
         
         <!-- ad end -->
         
+        <!-- page nav start -->
+        <!-- TODO: チュートリアル機能がある場合 -->
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./worktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
+        
         <!-- page start -->
         
         <menu id="page">
-            <span><a class="smallbutton" href="./gitFlow.html">Git Flow</a></span>
-            <span><a class="smallbutton" href="./master.html">master</a></span>
-            <span><a class="smallbutton active" href="./hotfix.html">hotfix</a></span>
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
         </menu>
         
         <!-- page end -->
         
-        <hr style="clear:both;" />
+        <hr style="clear:both;"/>
         
         <!-- footer start -->
         
@@ -155,7 +184,6 @@
         </footer>
         
         <!-- footer end -->
-        
         
     </body>
 </html>

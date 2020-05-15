@@ -3,17 +3,43 @@
     <head>
         <meta charset="UTF-8" />
         <title>素敵曜日 - Git Master - 応用編</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
         <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
         <style>
             </style>
     </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
             
             <nav class="mainMenuList">
                 <menu>
-                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./basic.html">basic</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
@@ -25,56 +51,80 @@
             
             <!-- menu start -->
             
-            <div id="menu">
-                <a href="./expansion.html">応用編</a> >
-                <a href="./branch.html">ブランチ</a> >> <a href="./gitFlow.html">Git Flow</a> >
-                <a href="#./repository.html">リポジトリ</a> >
-                <a href="#./tag.html">タグ</a> >
-                <a href="#./commit.html">コミット</a><br />
-            </div>
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button active" href="./expansion.html">応用編</a>
+                <a class="subbutton" href="./gitFlow.html">Git Flow</a>
+                <a class="subbutton" href="./repository.html">リポジトリの共有</a>
+                <a class="subbutton" href="./merge.html">変更履歴を統合</a><br />
+            </menu>
             
             <!-- menu end -->
             
-            <h1>応用編 - expansion</h1>
+            <h1 id="header_title">応用編 - expansion</h1>
+            <p id="header_description">
+            ここでは、様々なGit操作において応用となる（プロの現場）でもよく活用することを紹介していきます。
+            </p>
+            
         </header>
         
         <hr />
         
-        <!-- subtitle start-->
-        
-        <h3>応用編</h3>
-        <h2>expansion</h2>
-        
-        <!-- subtitle end -->
-        
-        <hr />
-
         <!-- contents start -->
+        <main id="contents">
         
-        <div id="contents">
+        <!-- subtitle basic start
+        <nav>
+                <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+        
+                <h3>基礎編</h3>
+                <a href="./basic.html" alt="basic" title="応用編"><h2>basic</h2></a>
+        </nav>
+        subtitle basic end -->
+        
+        <!-- basic（基礎編） start
+        
+        <section id="basic">
+            <h1>basic（基礎編）</h1>
+        </section>
+            
+        basic（基礎編） end -->
+
+        <!-- subtitle expansion start-->
+        <nav>
+            <a name="expansion" class="tagbutton" href="./expansion.html">応用編</a>
+
+        <h3>応用編</h3>
+        <a href="./expansion.html" alt="expansion" title="応用編"><h2>expansion</h2></a>
+
+        </nav>
+        <!-- subtitle expansion end -->
+
+        <hr />
+        
+        <!-- contents expansion start -->
+        
+        <section id="expansion">
             <h1>expansion（応用編）</h1>
-        </div>
+        </section>
         
+        <!-- contents expansion end -->
+        
+    </main>
         <!-- contents end -->
-        
+
         <hr style="clear:both;" />
         
         <!-- page start -->
         
-        <div id="page">
-            <span><a href="./index.html">Git Master</a></span> ->
-
-            + <span><a href="./basic.html">basic</a></span> ->
-            
-            + <span><a href="#">expansion</a></span>
-            
-            + <span><a href="./reference.html">reference</a></span> ->
-
-            + <span><a href="./branch.html">branch（ブランチ）</a></span> ->
-            
-            + <span><a href="./gitFlow.html">Git Flow</a></span> ->
-            
-        </div>
+        <menu id="page">
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./branch.html">branch（ブランチ）</a></span>
+            <span><a class="smallbutton active" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./gitFlow.html">Git Flow</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
+        </menu>
         
         <!-- page end -->
         
@@ -83,7 +133,7 @@
         <!-- footer start -->
         
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>

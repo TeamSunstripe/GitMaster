@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja" target="_blank">
     <head>
-        <meta charset="UTF-8">
-            <title>素敵曜日 - Git Master - Git Flow - master</title>
-            <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - Git Flow - master</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
 
-            <style>
-                </style>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
     </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
             
             <nav class="mainMenuList">
                 <menu>
-                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="./gitFlow.html">Git Flow</a></li>
                     <li class="mainMenuList"><a class="mainMenu selected" href="./master.html">master</a></li>
@@ -29,55 +54,71 @@
             
             <!-- menu start -->
             
-            <div id="menu">
-                <a href="./expansion.html">応用編</a> >
-                <a href="./branch.html">ブランチ</a> >> <a href="./gitFlow.html">Git Flow</a>
-                <br />
-            </div>
+            <menu id="menu">
+                    <a class="button" href="./basic.html">基礎編</a>
+                    <a class="subbutton" href="./branch.html">ブランチ</a> 
+                    <a class="button" href="./expansion.html">応用編</a>
+                    <a class="subbutton" href="./gitFlow.html">Git Flow</a>
+                    <a class="subbutton active" href="./master.html">master</a>
+                    <br />
+            </menu>
             
             <!-- menu end -->
             
-            <h1>Git Flow - master</h1>
+            <h1 id="header_title">Git Flow - master</h1>
+            <p id="header_description">
+            ここでは、GitFlowにおいて、masterブランチ - masterについて紹介していきます。
+            </p>
+
         </header>
         
         <hr />
         
+        <!-- contents start -->
+        <main id="contents">
+        
         <!-- subtitle start-->
         
         <h3>Git Flow</h3>
-        <h2>master（メイン用）</h2>
-
+        <a href="./master.html" alt="master" title="メイン用 統合ブランチ"><h2>master（メイン統合ブランチ）</h2></a>
+        
         <!-- subtitle end -->
         
         <hr />
         
         <!-- contents start -->
         
-        <div id="contents">
+        <section id="basic">
             <h1>masterブランチ</h1>（必須）
             
             <h3>命名規則</h3>
             master<br />
             
             <h3>説明</h3>
-            <ul>
-                <li>
-                    リリース可能な状態だけを管理
-                </li>
-                <li>
-                    特定のブランチからマージすることによってしか更新されない
-                </li>
-                <li>
-                    直接コミットしてはならないという制約をもつ
-                </li>
-                <li>
+            <p>
+                    リリース可能な状態だけを管理<br />
+                    特定のブランチからマージすることによってしか更新されない<br />
+                    直接コミットしてはならないという制約をもつ<br />
                     バージョンごとのtagはここから生まれる
-                </li>
-            </ul>
-        </div>
+            </p>
+        </section>
+<!-- basic（基礎編） end // -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
         
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
-        
+
         <hr style="clear:both;" />
         
         <!-- ad start -->
@@ -90,16 +131,12 @@
         
         <!-- page start -->
         
-        <div id="page">
-            <span><a href="gitFlow.html">Git Flow</a></span> ->
-            
-            + <span><a href="#">master</a></span> ->
-            
-            + <span><a href="./develop.html">develop</a></span> ->
-
-            + <span><a href="./hotfix.html">hotfix</a></span> ->
-            
-        </div>
+        <menu id="page">
+            <span><a class="smallbutton" href="gitFlow.html">Git Flow</a></span>
+            <span><a class="smallbutton active" href="./master.html">master</a></span>
+            <span><a class="smallbutton" href="./develop.html">develop</a></span>
+            <span><a class="smallbutton" href="./hotfix.html">hotfix</a></span>
+        </menu>
         
         <!-- page end -->
         
@@ -108,7 +145,7 @@
         <!-- footer start -->
         
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>
@@ -122,6 +159,6 @@
         
         <!-- footer end -->
         
-
+        
     </body>
 </html>

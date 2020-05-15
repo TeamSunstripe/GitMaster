@@ -2,24 +2,48 @@
 <html lang="ja" target="_blank">
     <head>
         <meta charset="UTF-8" />
-        <title>素敵曜日 - Git Master - リファレンス</title>
+        <title>素敵曜日 - Git Master - リファレンス（reference）</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
         <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
         <style>
             </style>
     </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
             
-            <nav class="mainMenuList">
+            <nav class="mainMenuList">      
                 <menu>
-                    <menu>
-                        <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
-                        <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
-                        <li class="mainMenuList"><a class="mainMenu" href="./basic.html">basic</a></li>
-                        <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
-                        <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
-                    </menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
                 </menu>
             </nav>
             
@@ -27,22 +51,30 @@
             
             <!-- menu start -->
             
-            <div id="menu">
-                <a href="#">リファレンス</a>
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button active" href="./reference.html">リファレンス</a>
                 <br />
-            </div>
+            </menu>
             
             <!-- menu end -->
             
-            <h1>リファレンス - reference</h1>
+            <h1 id="header_title">リファレンス - reference</h1>
+            <p id="header_description">
+            ここでは、様々なGitのリファレンスを紹介していきます。
+            </p>
+
         </header>
         
         <hr />
         
+        <!-- contents start -->
+        <main id="contents">
+        
         <!-- subtitle start-->
         
         <h3>リファレンス</h3>
-        <h2>reference</h2>
+        <a href="./reference.html" alt="reference" title="リファレンス"><h2>reference</h2></a>
         
         <!-- subtitle end -->
         
@@ -50,9 +82,737 @@
         
         <!-- contents start -->
         
-        <div id="contents">
+        <section id="reference">
             <h1>reference（リファレンス）</h1>
-        </div>
+            <menu>
+                <a href="#target"><h3>目的で探す</h3></a>
+                <a href="#a-z"><h3>A - Z other</h3></a>
+            </menu>
+            <article>
+                <a name="target"><h3>目的で探す</h3></a>
+                <h5>基本操作</h5>
+                <a href="#search-basic"><h4>基本操作</h4></a>         
+                <a href="#search-branch"><h4>ブランチ操作</h4></a>         
+                <a href="#search-merge"><h4>統合操作</h4></a>         
+                <a href="#search-rebase"><h4>リベース操作</h4></a>         
+                <a href="#search-tag"><h4>タグ操作</h4></a>         
+                <a href="#search-commit-log"><h4>コミットログ操作</h4></a>
+                <a href="#search-stash"><h4>Stash操作</h4></a>
+                <h5>応用操作</h5>
+                <a href="#search-expansion"><h4>応用操作</h4></a>         
+                <a href="#search-shh"><h4>SSH接続設定</h4></a>         
+                <a href="#search-git"><h4>Git設定</h4></a>             
+                <a href="search-subversion"><h4>Git-Subversion比較</h4></a>
+                <a href="search-trouble-shooting"><h4>トラブルシューティング</h4></a>
+            </article>
+            <article>
+                <a name="a-z"><h3>A - Z other</h3></a>
+                <h4>
+                        <a href="#search-a">a</a>
+                <a href="#search-b">b</a>
+                <a href="#search-c">c</a>
+                <a href="#search-d">d</a>
+                <a href="#search-e">e</a>
+                <a href="#search-f">f</a>
+                <a href="#search-g">g</a>
+                <a href="#search-h">h</a>
+                </h4>
+                <h4>
+                <a href="#search-i">i</a>
+                <a href="#search-j">j</a>
+                <a href="#search-k">k</a>
+                <a href="#search-l">l</a>
+                <a href="#search-m">m</a>
+                <a href="#search-n">n</a>
+                <a href="#search-o">o</a>
+                <a href="#search-p">p</a>
+                </h4>
+                <h4>
+                    <a href="#search-q">q</a>
+                <a href="#search-r">r</a>
+                <a href="#search-s">s</a>
+                <a href="#search-t">t</a>
+                <a href="#search-u">u</a>
+                <a href="#search-v">v</a>
+                <a href="#search-w">w</a>
+                <a href="#search-x">x</a>
+                </h4>
+                <h4>
+                <a href="#search-y">y</a>
+                <a href="#search-z">z</a>
+                <a href="#search-ohter">other</a>
+                </h4>
+            </article>
+            <h1>目的で探す</h1>
+
+            <article>
+                    <a name="search-basic"><h2>基本操作</h2></a>
+
+                    <a href="#基本操作"></a><h4>基本操作</h4></a>
+                    <p>
+                        Gitの基本操作を学びます
+                    </p>
+                    <a href="#リポジトリを作成したい"></a><h4>リポジトリを作成したい</h4></a>
+                    <p>
+                        リポジトリを作成したい
+                    </p>
+                    <a href="#ファイルをインデックスに登録したい"></a><h4>ファイルをインデックスに登録したい</h4></a>
+                    <p>
+                        ファイルをインデックスに登録したい
+                    </p>
+                    <a href="#ディレクトリをインデックスに登録したい"></a><h4>ディレクトリをインデックスに登録したい</h4></a>
+                    <p>
+                        ディレクトリをインデックスに登録したい
+                    </p>
+                    <a href="#インデックスに追加されたファイルをコミットしたい"></a><h4>インデックスに追加されたファイルをコミットしたい</h4></a>
+                    <p>
+                        インデックスに追加されたファイルをコミットしたい
+                    </p>
+                    <a href="#変更されたファイルの一覧を表示したい"></a><h4>変更されたファイルの一覧を表示したい</h4></a>
+                    <p>
+                        変更されたファイルの一覧を表示したい
+                    </p>
+                    <a href="#変更されたファイルの差分を見たい"></a><h4>変更されたファイルの差分を見たい</h4></a>
+                    <p>
+                        変更されたファイルの差分を見たい
+                    </p>
+                    <a href="#コミットログを見たい"></a><h4>コミットログを見たい</h4></a>
+                    <p>
+                        コミットログを見たい
+                    </p>
+                    <a href="#コミットの詳細を確認したい"></a><h4>コミットの詳細を確認したい</h4></a>
+                    <p>
+                        コミットの詳細を確認したい
+                    </p>
+                    <a href="#ファイル名を変更したい"></a><h4>ファイル名を変更したい</h4></a>
+                    <p>
+                        ファイル名を変更したい
+                    </p>
+                    <a href="#ディレクトリ名を変更したい"></a><h4>ディレクトリ名を変更したい</h4></a>
+                    <p>
+                        ディレクトリ名を変更したい
+                    </p>
+                    <a href="#ファイルやディレクトリ名を変更したい、移動したい"></a><h4>ファイルやディレクトリ名を変更したい、移動したい</h4></a>
+                    <p>
+                        ファイルやディレクトリ名を変更したい、移動したい
+                    </p>
+                    <a href="#ファイルを移動したい"></a><h4>ファイルを移動したい</h4></a>
+                    <p>
+                        ファイルを移動したい
+                    </p>
+                    <a href="#ディレクトリを移動したい"></a><h4>ディレクトリを移動したい</h4></a>
+                    <p>
+                        ディレクトリを移動したい
+                    </p>
+                    <a href="#ファイルを削除したい"></a><h4>ファイルを削除したい</h4></a>
+                    <p>
+                        ファイルを削除したい
+                    </p>
+                    <a href="#管理対象ではないファイルを削除したい"></a><h4>管理対象ではないファイルを削除したい</h4></a>
+                    <p>
+                        管理対象ではないファイルを削除したい
+                    </p>
+                    <a href="#以前にコミットしたことのあるファイルだけをすべてインデックスに登録したい"></a><h4>以前にコミットしたことのあるファイルだけをすべてインデックスに登録したい</h4></a>
+                    <p>
+                        以前にコミットしたことのあるファイルだけをすべてインデックスに登録したい
+                    </p>
+                    <a href="#手元で変更したインデックスに登録されていないファイルを元に戻したい"></a><h4>手元で変更したインデックスに登録されていないファイルを元に戻したい</h4></a>
+                    <p>
+                        手元で変更したインデックスに登録されていないファイルを元に戻したい
+                    </p>
+                    <a href="#インデックスに登録したファイルを取り消したい"></a><h4>インデックスに登録したファイルを取り消したい</h4></a>
+                    <p>
+                        インデックスに登録したファイルを取り消したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-branch"><h2>ブランチ操作</h2></a>
+
+                    <a href="#ブランチ操作"></a><h4>ブランチ操作</h4></a>
+                    <p>
+                        Gitのブランチ操作を学びます
+                    </p>
+                    <a href="#ブランチの一覧を表示したい"></a><h4>ブランチの一覧を表示したい</h4></a>
+                    <p>
+                        ブランチの一覧を表示したい
+                    </p>
+                    <a href="#ブランチを作成したい"></a><h4>ブランチを作成したい</h4></a>
+                    <p>
+                            ブランチを作成したい
+                    </p>
+                    <a href="#ブランチ名を変更したい"></a><h4>ブランチ名を変更したい</h4></a>
+                    <p>
+                            ブランチ名を変更したい
+                    </p>
+                    <a href="#ブランチを削除したい"></a><h4>ブランチを削除したい</h4></a>
+                    <p>
+                            ブランチを削除したい
+                    </p>
+                    <a href="#ブランチを切り替えたい"></a><h4>ブランチを切り替えたい</h4></a>
+                    <p>
+                            ブランチを切り替えたい
+                    </p>
+                    <a href="#ブランチを統合したい"></a><h4>ブランチを統合したい</h4></a>
+                    <p>
+                       <a href="./rebase.html">rebase - リベース</a>
+                    </p>
+                    <a href="#ブランチをマージしたい"></a><h4>ブランチをマージしたい</h4></a>
+                    <p>
+                       <a href="./merge.html">merge - マージ</a>
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-merge"><h2>統合操作</h2></a>
+
+                    <a href="#統合操作"></a><h4>統合操作</h4></a>
+                    <p>
+                        Gitの統合操作を学びます
+                    </p>
+                    <a href="#マージで統合したい"></a><h4>マージで統合したい</h4></a>
+                    <p>
+                       <a href="./merge.html">merge - マージ</a>
+                    </p>
+                    <a href="#リベースで統合したい"></a><h4>リベースで統合したい</h4></a>
+                    <p>
+                       <a href="./rebase.html">rebase - リベース</a>
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-rebase"><h2>リベース操作</h2></a>
+
+                    <a href="#リベース操作"></a><h4>リベース操作</h4></a>
+                    <p>
+                            Gitのリベース操作を学びます
+                    </p>
+                    <a href="#rebaseを途中で中止したい"></a><h4>rebaseを途中で中止したい</h4></a>
+                    <p>
+                            rebaseを途中で中止したい
+                    </p>
+                    <a href="#rebaseをなかったことにしたい"></a><h4>rebaseをなかったことにしたい</h4></a>
+                    <p>
+                            rebaseをなかったことにしたい
+                    </p>
+            </article>
+            
+
+            <article>
+                    <a name="search-tag"><h2>タグ操作</h2></a>
+
+                    <a href="#タグ操作"></a><h4>タグ操作</h4></a>
+                    <p>
+                        Gitのタグ操作を学びます
+                    </p>
+                    <a href="#タグの一覧を表示したい"></a><h4>タグの一覧を表示したい</h4></a>
+                    <p>
+                            タグの一覧を表示したい
+                    </p>
+                    <a href="#タグを作成したい"></a><h4>タグを作成したい</h4></a>
+                    <p>
+                            タグを作成したい
+                    </p>
+                    <a href="#注釈付きタグを作成したい"></a><h4>注釈付きタグを作成したい</h4></a>
+                    <p>
+                            注釈付きタグを作成したい
+                    </p>
+                    <a href="#タグを削除したい"></a><h4>タグを削除したい</h4></a>
+                    <p>
+                            タグを削除したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-commit-log"><h2>コミットログ操作</h2></a>
+
+                    <a href="#コミットログ操作"></a><h4>コミットログ操作</h4></a>
+                    <p>
+                            Gitのコミットログ操作を学びます
+                    </p>
+                    <a href="#直前のコミットの内容を修正したい"></a><h4>直前のコミットの内容を修正したい</h4></a>
+                    <p>
+                            直前のコミットの内容を修正したい
+                    </p>
+                    <a href="#直前のコミットのコメントだけを修正したい"></a><h4>直前のコミットのコメントだけを修正したい</h4></a>
+                    <p>
+                            直前のコミットのコメントだけを修正したい
+                    </p>
+                    <a href="#過去のコミットの内容を修正したい"></a><h4>過去のコミットの内容を修正したい</h4></a>
+                    <p>
+                            過去のコミットの内容を修正したい
+                    </p>
+                    <a href="#過去のコミットのコメントだけを修正したい"></a><h4>過去のコミットのコメントだけを修正したい</h4></a>
+                    <p>
+                            過去のコミットのコメントだけを修正したい
+                    </p>
+                    <a href="#特定のコメントを含むコミットを探したい"></a><h4>特定のコメントを含むコミットを探したい</h4></a>
+                    <p>
+                            特定のコメントを含むコミットを探したい
+                    </p>
+                    <a href="#直前のコミットをなかったことにしたい"></a><h4>直前のコミットをなかったことにしたい</h4></a>
+                    <p>
+                            直前のコミットをなかったことにしたい
+                    </p>
+                    <a href="#ブランチを間違えてしまったコミットを移動したい"></a><h4>ブランチを間違えてしまったコミットを移動したい</h4></a>
+                    <p>
+                            ブランチを間違えてしまったコミットを移動したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-stash"><h2>Stash操作</h2></a>
+
+                    <a href="#Stash操作"></a><h4>Stash操作</h4></a>
+                    <p>
+                            GitのStash操作を学びます
+                    </p>
+                    <a href="#現在の作業を一時的に退避したい"></a><h4>現在の作業を一時的に退避したい</h4></a>
+                    <p>
+                            現在の作業を一時的に退避したい
+                    </p>
+                    <a href="#退避した作業の一覧を表示したい"></a><h4>退避した作業の一覧を表示したい</h4></a>
+                    <p>
+                            退避した作業の一覧を表示したい
+                    </p>
+                    <a href="#退避した作業を復元したい"></a><h4>退避した作業を復元したい</h4></a>
+                    <p>
+                            退避した作業を復元したい
+                    </p>
+                    <a href="#退避した作業を削除したい"></a><h4>退避した作業を削除したい</h4></a>
+                    <p>
+                            退避した作業を削除したい
+                    </p>
+                    <a href="#退避した作業を全て削除したい"></a><h4>退避した作業を全て削除したい</h4></a>
+                    <p>
+                            退避した作業を全て削除したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-expansion"><h2>応用操作</h2></a>
+
+                    <a href="#応用操作"></a><h4>応用操作</h4></a>
+                    <p>
+                            Gitの応用操作を学びます
+                    </p>
+                    <a href="#HEADの移動履歴を見たい"></a><h4>HEADの移動履歴を見たい</h4></a>
+                    <p>
+                            HEADの移動履歴を見たい
+                    </p>
+                    <a href="#ブランチの先頭の移動履歴を見たい"></a><h4>ブランチの先頭の移動履歴を見たい</h4></a>
+                    <p>
+                            ブランチの先頭の移動履歴を見たい
+                    </p>
+                    <a href="#直前のresetをなかったことにしたい"></a><h4>直前のresetをなかったことにしたい</h4></a>
+                    <p>
+                            直前のresetをなかったことにしたい
+                    </p>
+
+            </article>
+
+            <article>
+                    <a name="search-remote"><h2>リモート操作</h2></a>
+
+                    <a href="#リモート操作"></a><h4>リモート操作</h4></a>
+                    <p>
+                            Gitのリモート操作を学びます
+                    </p>
+                    <a href="#既存のリモートリポジトリを複製したい"></a><h4>既存のリモートリポジトリを複製したい</h4></a>
+                    <p>
+                            既存のリモートリポジトリを複製したい
+                    </p>
+                    <a href="#リモートリポジトリを追加したい"></a><h4>リモートリポジトリを追加したい</h4></a>
+                    <p>
+                            リモートリポジトリを追加したい
+                    </p>
+                    <a href="#リモートリポジトリの一覧を表示したい"></a><h4>リモートリポジトリの一覧を表示したい</h4></a>
+                    <p>
+                            リモートリポジトリの一覧を表示したい
+                    </p>
+                    <a href="#リモートリポジトリのブランチからローカルリポジトリのブランチを作成したい"></a><h4>リモートリポジトリのブランチからローカルリポジトリのブランチを作成したい</h4></a>
+                    <p>
+                            リモートリポジトリのブランチからローカルリポジトリのブランチを作成したい
+                    </p>
+                    <a href="#リモートリポジトリにブランチを作成したい"></a><h4>リモートリポジトリにブランチを作成したい</h4></a>
+                    <p>
+                            リモートリポジトリにブランチを作成したい
+                    </p>
+                    <a href="#リモートリポジトリにブランチに変更内容を反映したい"></a><h4>リモートリポジトリにブランチに変更内容を反映したい</h4></a>
+                    <p>
+                            リモートリポジトリにブランチに変更内容を反映したい
+                    </p>
+                    <a href="#リモートリポジトリのブランチの変更内容を確認したい"></a><h4>リモートリポジトリのブランチの変更内容を確認したい</h4></a>
+                    <p>
+                            リモートリポジトリのブランチの変更内容を確認したい
+                    </p>
+                    <a href="#リモートリポジトリのブランチの変更内容を取り込みたい"></a><h4>リモートリポジトリのブランチの変更内容を取り込みたい</h4></a>
+                    <p>
+                            リモートリポジトリのブランチの変更内容を取り込みたい
+                    </p>
+                    <a href="#リモートリポジトリのブランチを削除したい"></a><h4>リモートリポジトリのブランチを削除したい</h4></a>
+                    <p>
+                            リモートリポジトリのブランチを削除したい
+                    </p>
+                    <a href="#リモートリポジトリにタグを作成したい"></a><h4>リモートリポジトリにタグを作成したい</h4></a>
+                    <p>
+                            リモートリポジトリにタグを作成したい
+                    </p>
+                    <a href="#リモートリポジトリのタグを削除したい"></a><h4>リモートリポジトリのタグを削除したい</h4></a>
+                    <p>
+                            リモートリポジトリのタグを削除したい
+                    </p>
+                    <a href="#登録済みのリモートリポジトリのアドレスを変更したい"></a><h4>登録済みのリモートリポジトリのアドレスを変更したい</h4></a>
+                    <p>
+                            登録済みのリモートリポジトリのアドレスを変更したい
+                    </p>
+                    <a href="#登録済みのリモートリポジトリの名前を変更したい"></a><h4>登録済みのリモートリポジトリの名前を変更したい</h4></a>
+                    <p>
+                            登録済みのリモートリポジトリの名前を変更したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-ssh"><h2>SSH接続設定</h2></a>
+
+                    <a href="#SSH接続設定"></a><h4>SSH接続設定</h4></a>
+                    <p>
+                        GitのSSH接続設定を学びます
+                    </p>
+                    <a href="#SSH接続を設定したい(Windows)"></a><h4>SSH接続を設定したい(Windows)</h4></a>
+                    <p>
+                            SSH接続を設定したい(Windows)
+                    </p>
+                    <a href="#SSH接続を設定したい(Mac)"></a><h4>SSH接続を設定したい(Mac)</h4></a>
+                    <p>
+                            SSH接続を設定したい(Mac)
+                    </p>
+                    <a href="#SSH接続を設定したい(コンソール)"></a><h4>SSH接続を設定したい(コンソール)</h4></a>
+                    <p>
+                            SSH接続を設定したい(コンソール)
+                    </p>
+                    <a href="#BacklogにSSH鍵を設定したい"></a><h4>BacklogにSSH鍵を設定したい</h4></a>
+                    <p>
+                            BacklogにSSH鍵を設定したい
+                    </p>
+                    <a href="#GithubにSSH鍵を設定したい"></a><h4>GithubにSSH鍵を設定したい</h4></a>
+                    <p>
+                            GithubにSSH鍵を設定したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-git"><h2>Git設定</h2></a>
+
+                    <a href="#Git設定"></a><h4>Git設定</h4></a>
+                    <p>
+                            Git設定を学びます
+                    </p>
+                    <a href="#ユーザ名を設定したい"></a><h4>ユーザ名を設定したい</h4></a>
+                    <p>
+                            ユーザ名を設定したい
+                    </p>
+                    <a href="#メールアドレスを設定したい"></a><h4>メールアドレスを設定したい</h4></a>
+                    <p>
+                            メールアドレスを設定したい
+                    </p>
+                    <a href="#出力をカラーリングしたい設定の一覧を表示したい"></a><h4>出力をカラーリングしたい設定の一覧を表示したい</h4></a>
+                    <p>
+                            出力をカラーリングしたい設定の一覧を表示したい
+                    </p>
+                    <a href="#コマンドにエイリアスを設定したい"></a><h4>コマンドにエイリアスを設定したい</h4></a>
+                    <p>
+                            コマンドにエイリアスを設定したい
+                    </p>
+                    <a href="#不要なファイルを管理対象外にしたい"></a><h4>不要なファイルを管理対象外にしたい</h4></a>
+                    <p>
+                            不要なファイルを管理対象外にしたい
+                    </p>
+                    <a href="#空ディレクトリを管理対象としたい"></a><h4>空ディレクトリを管理対象としたい</h4></a>
+                    <p>
+                            空ディレクトリを管理対象としたい
+                    </p>
+                    <a href="#設定の一覧を表示したい"></a><h4>設定の一覧を表示したい</h4></a>
+                    <p>
+                            設定の一覧を表示したい
+                    </p>
+                    <a href="#プロキシサーバを経由してhttp接続したい"></a><h4>プロキシサーバを経由してhttp接続したい</h4></a>
+                    <p>
+                            プロキシサーバを経由してhttp接続したい
+                    </p>
+                    <a href="#ユーザ認証の必要なプロキシサーバを経由してhttp接続したい"></a><h4>ユーザ認証の必要なプロキシサーバを経由してhttp接続したい</h4></a>
+                    <p>
+                            ユーザ認証の必要なプロキシサーバを経由してhttp接続したい
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-subversion"><h2>Git-Subversion比較</h2></a>
+
+                    <a href="#Git-Subversion比較"></a><h4>Git-Subversion比較</h4></a>
+                    <p>
+                            Git-Subversion比較
+                    </p>
+                    <a href="#Git-Subversionコマンド比較表"></a><h4>Git-Subversionコマンド比較表</h4></a>
+                    <p>
+                            Git-Subversionコマンド比較表
+                    </p>
+            </article>
+
+            <article>
+                    <a name="search-trouble-shooting"><h2>トラブルシューティング</h2></a>
+
+                    <a href="#トラブルシューティング"></a><h4>トラブルシューティング</h4></a>
+                    <p>
+                            Gitのトラブルシューティングを学びます
+                    </p>
+                    <h5>SSH</h5>
+                    <a href="#リモートに接続しようとしたときに、”Permission denied (publickey).” と表示されます"></a><h4>リモートに接続しようとしたときに、”Permission denied (publickey).” と表示されます</h4></a>
+                    <p>
+                            リモートに接続しようとしたときに、”Permission denied (publickey).” と表示されます
+                    </p>
+                    <h5>HTTPS</h5>
+                    <a href="#cloneできません"></a><h4>cloneできません</h4></a>
+                    <p>
+                            cloneできません
+                    </p>
+                    <a href="#push/pull するときに毎回パスワードを聞かれます"></a><h4>push/pull するときに毎回パスワードを聞かれます</h4></a>
+                    <p>
+                            push/pull するときに毎回パスワードを聞かれます
+                    </p>
+                    <h5>SSH/HTTPS 共通</h5>
+                    <a href="#pushしても、リモートリポジトリに反映されません"></a><h4>pushしても、リモートリポジトリに反映されません</h4></a>
+                    <p>
+                            pushしても、リモートリポジトリに反映されません
+                    </p>
+            </article>
+
+            <h1>A - Z other</h1>
+            <article>
+                    <a name="search-a"><h4>a</h4></a>
+            </article>
+            <article>
+                    <a name="search-b"><h4>b</h4></a>   
+
+                    <a href="./branch.html"><h4>branch - ブランチ</h4></a>
+                    <p>
+                        履歴の流れを分岐して記録していくためのもの
+                    </p> 
+            </article>
+            <article>
+                    <a name="search-c"><h4>c</h4></a>
+
+                    <a href="./checkOut.html"><h4>check out - チェックアウト</h4></a>
+                    <p>
+                        ヘッドを切り替えること<br />
+                        過去のコミットを対象にチェックアウトした場合、それをもとにコミットすることはできない
+                    </p>
+                    <a href="./clone.html"><h4>clone - クローン</h4></a>
+                    <p>
+                        リモートリポジトリをコピーしてローカルリポジトリを作成すること
+                    </p>
+                    <a href="./commit.html"><h4>commit - コミット</h4></a>
+                    <p>インデックスに登録してある変更対象をローカルリポジトリに反映すること</p>
+                    <a href="./confrict.html"><h4>confrict - コンフリクト</h4></a>
+                    <p>マージ対象の２ファイルで同じ箇所が変更されており、自動でマージができないこと</p>  
+            </article>
+            <article>
+                    <a name="search-d"><h4>d</h4></a>  
+
+                    <a href="./develop.html"><h4>develop - ディベロップ</h4></a>
+                    <p>ディベロップ</p> 
+            </article>             
+            <article>
+                    <a name="search-e"><h4>e</h4></a>             
+            </article>             
+            <article>
+                    <a name="search-f"><h4>f</h4></a>             
+
+                    <a href="./feature.html"><h4>feature - フィーチャー</h4></a>
+                    <p>フィーチャー</p>
+                    <a href="./fetch.html"><h4>fetch - フェッチ</h4></a>
+                    <p>
+                        リモートリポジトリの変更をローカルリポジトリに反映させること<br />
+                        フェッチ＋マージ
+                    </p>
+                    <a href="./fork.html"><h4>fork - フォーク</h4></a>
+                    <p>
+                        リモートリポジトリをコピーしてリモートリポジトリを作成すること
+                    </p>
+            </article>
+            <article>
+                    <a name="search-g"><h4>g</h4></a>
+
+                    <a href="./git.html"><h4>git - ギット</h4></a>
+                    <p>ギット</p> 
+                    <a href="./gitFlow.html"><h4>Git Flow - ギットフロー</h4></a>
+                    <p>ギットフロー</p> 
+                    <a href="./gitHubFlow.html"><h4>GitHub Flow - ギットハブフロー</h4></a>
+                    <p>ギットハブフロー</p> 
+                    <a href="./gitgnore.html"><h4>gitgnore - ギットイグノア</h4></a>
+                    <p>
+                        履歴管理の対象外とするファイルを登録するところ<br />
+                        対象範囲は各リポジトリ
+                    </p>
+                    <a target="_blank" href="https://amzn.to/3212lju"><h4>【P R】Gitが、おもしろいほどわかる基本の使い方33　改訂新版</h4></a>
+                    <p>
+                        【P R】 Gitが、おもしろいほどわかる基本の使い方33〈バージョン管理、SourceTree、Bitbucket〉
+                        <img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=B07T5995HK" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </p>
+            </article>
+            <article>
+                    <a name="search-h"><h4>h</h4></a>
+
+                    <a href="./head.html"><h4>head - ヘッド</h4></a>
+                    <p>作業対象となっているブランチ、コミット</p> 
+                    <a href="./hotfix.html"><h4>hotfix - ホットフィックス</h4></a>
+                    <p>ホットフィックス</p> 
+                    <a href="./hunk.html"><h4>hunk - ハンク</h4></a>
+                    <p>変更した一範囲</p> 
+                </article>
+                <hr />             
+            <article>
+                    <a name="search-i"><h4>i</h4></a>
+
+                    <a href="./gitIndex.html"><h4>index - インデックス</h4></a>
+                    <p>コミットしたいファイル又はファイルの一部を登録するところ。</p>
+                    <a target="_blank" href="https://amzn.to/2YleM7B"><h4>【P R】いちばんやさしいGit&amp;GitHubの教本</h4></a>
+                    <p>
+                        【P R】いちばんやさしいGit&amp;GitHubの教本 人気講師が教えるバージョン管理&amp;共有入門 (「いちばんやさしい教本」シリーズ)
+                        <img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=429500524X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </p>
+                </article>
+                <article>
+                    <a name="search-j"><h4>j</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-k"><h4>k</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-l"><h4>l</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-m"><h4>m</h4></a>  
+
+                    <a href="./master.html"><h4>master - マスター</h4></a>
+                    <p>マスター</p> 
+                    <a href="./merge.html"><h4>merge - マージ</h4></a>
+                    <p>
+                        異なるブランチの変更を反映させること<br />
+                        お互いの変更履歴が残る
+                    </p> 
+                </article>  
+                <article>
+                    <a name="search-n"><h4>n</h4></a>     
+                    
+                    <a target="_blank" href="https://amzn.to/2RImmGD"><h4>【P R】ノンプログラマーなMacユーザーのためのGit入門</h4></a>
+                    <p>
+                        【P R】ノンプログラマーなMacユーザーのためのGit入門
+                        <img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=B07S5ZDCM8" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </p>
+                </article>             
+                <article>
+                    <a name="search-o"><h4>o</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-p"><h4>p</h4></a>
+
+                    <a href="./push.html"><h4>push - プッシュ</h4></a>
+                    <p>ローカルリポジトリの変更をリモートリポジトリに反映させること</p> 
+                    <a href="./pull.html"><h4>pull - プッシュ</h4></a>
+                    <p>
+                        リモートリポジトリの変更をローカルリポジトリに反映させること<br />
+                        フェッチ＋マージ
+                    </p> 
+                    <a href="./pullRequest.html"><h4>pull request - プルリクエスト</h4></a>
+                    <p>フォークしたリポジトリでの変更を、フォーク元のリポジトリへ反映するよう依頼すること</p> 
+                </article>
+                <hr />             
+                <article>
+                    <a name="search-q"><h4>q</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-r"><h4>r</h4></a>
+                              
+                    <a href="./repository.html"><h4>repository - リポジトリ</h4></a>
+                    <p>履歴管理を行う場所</p>
+                    <a href="./remoteRepository.html"><h4>remote repository - リモート リポジトリ</h4></a>
+                    <p>サーバーにあるリポジトリ。基本はベアリポジトリで運用される。</p>
+                    <a href="./localRepository.html"><h4>local repository - ローカル リポジトリ</h4></a>
+                    <p>自分のPCにあるリポジトリ。基本はノンベアリポジトリで運用される</p>
+                    <a href="./bareRepository.html"><h4>bare repository - ベア リポジトリ</h4></a>
+                    <p>ワークツリーを持たず、チェックアウト、マージができないリポジトリ</p>
+                    <a href="./nonBareRepository.html"><h4>non bare repository - ノンベア リポジトリ</h4></a>
+                    <p>ワークツリーを持ち、チェックアウト、マージができるリポジトリ</p>
+                    <a href="./rebase.html"><h4>rebase - リベース</h4></a>
+                    <p>
+                        異なるブランチの変更を反映させること<br />
+                        変更履歴が片方に集約される
+                    </p>
+                    <a href="./release.html"><h4>release - リリース</h4></a>
+                    <p>リリース</p>
+                    <a href="./reset.html"><h4>reset - リセット</h4></a>
+                    <p>
+                        コミット前の変更をローカルリポジトリの状態へ戻すこと<br />
+                        また、特定のコミットまで状態を戻すこと。ただし、ローカルリポジトリに限られる
+                    </p> 
+                </article>
+                <article>
+                    <a name="search-s"><h4>s</h4></a>
+
+                    <a href="./stage.html"><h4>stage - ステージ</h4></a>
+                    <p>ワークツリーからコミットしたいファイル又はファイルの一部をIndexに登録すること。</p>        
+                </article>             
+                <article>
+                    <a name="search-t"><h4>t</h4></a>
+
+                    <a href="./tag.html"><h4>tag - タグ</h4></a>
+                    <p>タグ</p>
+                </article>             
+                <article>
+                    <a name="search-u"><h4>u</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-v"><h4>v</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-w"><h4>w</h4></a>
+
+                    <a href="./worktree.html"><h4>work tree - ワークツリー</h4></a>
+                    <p>履歴管理を行いたいファイルがある場所</p>
+                    <a target="_blank" href="https://amzn.to/324b98r"><h4>【P R】 わかばちゃんと学ぶ Git使い方入門</h4></a>
+                    <p>
+                        【P R】 わかばちゃんと学ぶ Git使い方入門
+                        <img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=B071D4D6XX" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    </p>
+                </article>       
+                <article>
+                    <a name="search-x"><h4>x</h4></a>             
+                </article>
+                <hr />             
+                <article>
+                    <a name="search-y"><h4>y</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-z"><h4>z</h4></a>             
+                </article>             
+                <article>
+                    <a name="search-ohter"><h4>other</h4></a>
+                     
+                    <a href="./gitgnore.html"><h4>.gitgnore - ドットギットイグノア</h4></a>
+                    <p>
+                        履歴管理の対象外とするファイルを登録するところ<br />
+                        対象範囲は各リポジトリ
+                    </p>
+                     
+                    <a href="./gitgnore.html"><h4>.gitgnore（グローバル） - ドットギットイグノア（グローバル）</h4></a>
+                    <p>
+                        履歴管理の対象外とするファイルを登録するところ<br />
+                        対象範囲は全リポジトリ
+                    </p>
+                </article>
+            </article>
+    </section>
         
         <!-- contents end -->
         
@@ -62,20 +822,24 @@
         
         <div id="ad">
             <!-- 広告枠 //-->
+            <a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07S5ZDCM8/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07S5ZDCM8&linkCode=as2&tag=karaage1112-22&linkId=5435235dbbbd3d930580f447fdb93728"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B07S5ZDCM8&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=karaage1112-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=B07S5ZDCM8" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            <a target="_blank"  href="https://www.amazon.co.jp/gp/product/429500524X/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=429500524X&linkCode=as2&tag=karaage1112-22&linkId=09c155ac9903af14df86ae0e836c371b"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=429500524X&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=karaage1112-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=429500524X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            <a target="_blank"  href="https://www.amazon.co.jp/gp/product/4863542178/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4863542178&linkCode=as2&tag=karaage1112-22&linkId=008254d1e82e959f4a62e1eb6d8f8a2d"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4863542178&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=karaage1112-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=4863542178" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            <a target="_blank"  href="https://www.amazon.co.jp/gp/product/4844368680/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=4844368680&linkCode=as2&tag=karaage1112-22&linkId=48bafa5691662be684d7cc33bb681a1b"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=4844368680&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=karaage1112-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=karaage1112-22&l=am2&o=9&a=4844368680" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
         </div>
         
         <!-- ad end -->
         
         <!-- page start -->
         
-        <div id="page">
-            <span><a href="./basic.html">basic</a></span> ->
+        <menu id="page">
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
             
-            + <span><a href="./expansion.html">expansion</a></span> ->
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
             
-            + <span><a href="#">reference</a></span> ->
+            <span><a class="smallbutton active" href="./reference.html">reference</a></span>
             
-        </div>
+        </menu>
         
         <!-- page end -->
         
@@ -84,7 +848,7 @@
         <!-- footer start -->
         
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>

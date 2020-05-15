@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - ローカル レポジトリ（local resository）</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+                
+            <body>
+                <header>
+                    <!-- nav start -->
+                    
+                    <nav class="mainMenuList">
+                        <menu>
+                            <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
+                            <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                            <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                            <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
+                            <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
+                        </menu>
+                    </nav>
+                    
+                    <!-- nav end -->
+                    
+                    <!-- menu start -->
+                    
+                    <menu id="menu">
+                        <a class="button" href="./index.html">GitMaster</a>
+                        <a class="button" href="./basic.html">基礎編</a>
+                        <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                        <a class="subbutton active" href="./repository.html">リポジトリ</a>
+                        <a class="subbutton" href="./tag.html">タグ</a>
+                        <a class="subbutton" href="./commit.html">コミット</a>
+                        <br />
+                    </menu>
+                    
+                    <!-- menu end -->
+                    <h1 id="header_title">local repository</h1>
+                    <p id="header_description">
+                    ここでは、Gitにおいてのlocal repository（ローカルリポジトリ）のことを紹介していきます。
+                    </p>
+        
+                </header>
+                
+                <hr />
+                
+                <!-- contents start -->
+                <main id="contents">
+                
+                <!-- subtitle basic start-->
+                
+                <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+        
+                <h3>ローカル レポジトリ</h3>
+                <a href="./localRepository.html#basic" alt="local resository" title="ローカル レポジトリ"><h2>local resository</h2></a>
+                
+                <!-- subtitle basic end -->
+                
+                <hr />        
+        
+                <!-- basic（基礎編） start -->
+                <section id="basic">
+                    <!-- basic（基礎編） // -->
+                    <h1>basic（基礎編）</h1>
+                    <article>
+                        <h3>自分の手元のマシン上に配置するローカルリポジトリ</h3>
+                        <p>
+                            ユーザ一人ひとりが利用するために、自分の手元のマシン上に配置するリポジトリです。<br />
+                            リポジトリをリモートとローカルの2種類に分けることで、普段の作業はローカルリポジトリを使って全て手元のマシン上で行うことができます。<br />
+                            自分の<a href="localRepository.html">ローカルリポジトリ</a>で作業した内容を公開したい時は、<a href="remoteRepository.html">リモートリポジトリ</a>にアップロードして公開します。また、リモートリポジトリを通してほかの人の作業内容を取得することもできます。<br />
+                        </p>
+                        <p>
+                        Gitの<a href="repository.html#basic">リポジトリ</a>は、<a href="remoteRepository.html">リモートリポジトリ</a>と<a href="./localRepository.html">ローカルリポジトリ</a>の2種類に分けられます。
+                        </p>
+                    </article>
+        
+                    <article>
+                            <h3>リポジトリの作成</h3>
+                            <p>
+                                自分の手元に<a href="./localRepository.html">ローカルリポジトリ</a>を作成する方法は二種類あります。<br />
+                                <br />
+                                一つ目は全く新しいリポジトリを作成する方法、二つ目は<a href="localRepository.html">リモートリポジトリ</a>をコピーして作成する方法です。<br />
+                            </p>
+                    </article>
+                    
+                    <article class="comment">
+                        <p>
+                                次のページでは<a href="commit.html">コミット</a>について説明
+                        </p>
+                    </article>
+        
+                </section>
+        
+                <!-- basic page nav start -->
+                
+                <nav id="basic_page_nav" style="width:80%">
+                
+                        <span><a class="prevbutton" href="./basicStart.html#basic">「基礎編 - はじめに」に戻る </a></span>
+                        
+                        <span><a class="subbutton" href="./repository.html#basic">「基礎編 - 履歴を管理するリポジトリ」</a></span>
+                                
+                        <span><a class="nextbutton" href="./commit.html#basic">「基礎編 - 変更を記録するコミット」に進む </a></span>
+                                
+                </nav>
+        
+                <!-- basic page nav end -->
+        
+        <!-- basic（基礎編） end // -->
+        
+        <!-- setup（setup編） start // -->
+        <section id="setup">
+        
+                <!-- subtitle start-->
+                
+                <a name="setup" class="tagbutton" href="./basicStart.html">setup編</a>
+        
+                <h3>リポジトリ</h3>
+                <a href="./repository.html#setup" alt="repository" title="リポジトリ"><h2>repository</h2></a>
+                
+                <!-- subtitle end -->
+        
+                <h2>チュートリアル1 Gitの基本</h2>
+                <article class="comment">
+                        <h3>リポジトリを作成</h3>
+                        <p>
+                                それでは、新しいリポジトリをローカルに作成します。ここでは、「tutorial」という名前で空のディレクトリを作成して、Gitの管理下に置きましょう。
+                        <br />
+                                以降のチュートリアルでもこのディレクトリを使って進めていきます。
+                            </p>
+                        お使いのパソコンの環境を選んでください。
+                        </article>
+                            
+                        <article>
+                                <h3>コンソール</h3>
+                                <p>
+                                    まずはtutorialディレクトリを好きな所に作成してください。
+                                    <br />
+                                    tutorialディレクトリをGitの管理下にするには、そのディレクトリに移動してinitコマンドを使用します。
+                                </p>
+                                <p>
+                                http://git-scm.com/
+                                </p>
+                        </article>
+        
+                        <article>
+<pre class="code">
+$ git init
+</pre>
+        <p>
+                ここでは、新しく作成したtutorialディレクトリをGitリポジトリに設定しました。
+        </p>          
+                        </article>
+        
+                        <article>
+<pre class="code">
+$ mkdir tutorial
+$ cd tutorial
+$ git init
+Initialized empty Git repository
+in /Users/yourname/Desktop/tutorial/.git/
+</pre>
+                        </article>
+                
+                            <article class="comment">
+                                    <p>
+                                        次は、このリポジトリにファイルをコミットしましょう
+                                    </p>
+                                </article>
+                
+                            </section>
+        <!-- setup（setup編） end // -->
+        
+                <!-- setup page nav start -->
+                
+                <nav id="setup_page_nav" style="width:80%">
+                
+                        <span><a class="prevbutton" href="./basicGitSetting.html#setup">「setup編 - Gitの初期設定」に戻る </a></span>
+                        
+                        <span><a class="subbutton" href="./repository.html#setup">「setup編 - Gitのリポジトリを作成」</a></span>
+                                
+                        <span><a class="nextbutton" href="./commit.html#setup">「setup編 - Gitのリポジトリにコミット」に進む </a></span>
+                                
+                </nav>
+        
+                <!-- setup page nav end -->
+        
+        <!-- expansion（応用編） start // 
+        <section id="expantion">
+        <h1>expansion（応用編）</h1>
+                
+        <article>
+            <h2>応用編 - 概要</h2>
+                <p>
+                    応用編 - 説明
+                </p>
+        </article>
+        </section>
+        !-- expansion（応用編） end // -->
+                </main>
+                <!-- contents end -->
+                
+                <hr style="clear:both;"/>
+                
+                <!-- ad start -->
+                
+                <div id="ad">
+                    <!-- 広告枠 //-->
+                </div>
+                
+                <!-- ad end -->
+        
+                <!-- page start -->
+                
+                <menu id="page">
+                    <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+                    <span><a class="smallbutton active" href="./basic.html">basic</a></span>
+                    <span><a class="smallbutton active" href="./basicStart.html">Gitの基本</a></span> 
+                    <span><a class="smallbutton active" href="./expansion.html">expansion</a></span>
+                    <span><a class="smallbutton active" href="./reference.html">reference</a></span>
+                </menu>
+                
+                <!-- page end -->
+                
+                <hr style="clear:both;"/>
+                
+                <!-- footer start -->
+                
+                <footer>
+                    <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+                    <div style="clear:both;text-align:center;">
+                        
+                        &copy; 2011 - <script>
+                            var newDate = new Date();
+                            //年・月・日・曜日を取得する
+                            var year = newDate.getFullYear();
+                            document.write(year);
+                            </script> Team Sun Stripe
+                    </div>
+                </footer>
+                
+                <!-- footer end -->
+                
+                
+            </body>
+        </html>
+        

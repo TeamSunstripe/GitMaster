@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja" target="_blank">
-<head>
-    <meta charset="UTF-8" />
-    <title>素敵曜日 - Git Master</title>
-    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
-    <style>
-        </style>
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master</title>
+        <!-- meta name="robots" content="noindex, nofollow" /-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
     <body>
         <header>
             <!-- nav start -->
             
             <nav class="mainMenuList">
                 <menu>
-                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/lab/">素敵曜日</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="../DesignLab/index.html">Design Lab</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="../CSSLab/index.html">CSSLab</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="../HTMLLab/index.html">HTMLLab</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="../PHPLab/index.html">PHPLab</a></li>
                     <li class="mainMenuList"><a class="mainMenu" href="../JavaScriptLab/index.html">JavaScriptLab</a></li>
-                    <li class="mainMenuList"><a class="mainMenu selected" href="../GitMaster/index.html">GitMaster</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="http://sunstripe.main.jp/GitMaster/">GitMaster</a></li>
                 </menu>
             </nav>
             
@@ -28,34 +54,64 @@
             
             <!-- menu start -->
             
-            <div id="menu">
-                <a href="./index.html">GitMaster</a> >
-                <a href="./basic.html">基礎編</a> >
-                <a href="./expansion.html">応用編</a> >
-                <a href="./reference.html">リファレンス</a><br />
-            </div>
+            <menu id="menu">
+                <a class="button active" href="./index.html">GitMaster</a>
+                <a class="button" href="./basic.html">基礎編</a>
+                <a class="button" href="./expansion.html">応用編</a>
+                <a class="button" href="./reference.html">リファレンス</a><br />
+            </menu>
             
             <!-- menu end -->
             
-            <h1>素敵曜日 - Git Master</h1>
+            <h1 id="header_title">素敵曜日 - Git Master</h1>
+            <p id="header_description">
+            このサイトでは、Gitについて考え方や理解を基礎として、職場で活用されている応用となることなどを紹介していきます。
+            </p>
+            
         </header>
         
         <hr />
         
+        <!-- contents start -->
+        <main id="contents">
+        
         <!-- subtitle start-->
         
         <h3>素敵曜日</h3>
-        <h2>Git Master</h2>
+        <a href="./index.html" alt="Git Master" title="Git Master公式サイト"><h2>Git Master 公式サイト</h2></a>
         
         <!-- subtitle end -->
-
-        <hr />
-
-        <!-- contents start -->
-        <div id="contents">
-            <h1>Git Master</h1>
-        </div>
         
+        <hr />
+        
+        <!-- start -->
+        <section id="start">
+            <h1>Git Master</h1>
+
+            <article>
+                    <a href="./basic.html"><h4>基礎編</h4></a>
+                    <p>Git初心者の方に向けて</p>
+                    <a href="./expansion.html"><h4>応用編</h4></a>
+                    <p>Gitを職場で使っている方に向けて</p>
+                    <a href="./reference.html"><h4>リファレンス</h4></a>
+                    <p>Git用語やこうしたいんだけど？というのをまとめました</p>
+            </article>
+        </section>
+        <!-- end // -->
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
         <!-- contents end -->
         
         <hr style="clear:both;" />
@@ -70,25 +126,36 @@
         
         <!-- page start -->
         
-        <div id="page">
-            <span><a href="#">Git Master</a></span> ->
+        <menu id="page">
+            <span><a class="smallbutton active" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
             
-            + <span><a href="./basic.html">basic</a></span> ->
-            
-            + <span><a href="./expansion.html">expansion</a></span> ->
-            
-            + <span><a href="./reference.html">reference</a></span> ->
-            
-        </div>
+        </menu>
         
         <!-- page end -->
         
         <hr style="clear:both;" />
         
+        <!-- ad start -->
+        
+        <section id="qr_code" style="text-align:center;">
+            <!-- QR_code枠 //-->
+            <div style="width:100%;max-width:340px;">
+                <img src="./images/gitmaster_qr.png" alt="GitMaster QR Code" title="GitMaster QR Code" style="width:100%;max-width:300px;" />
+                <h1>GitMaster - QR コード</h1>
+            </div>
+        </section>
+            
+        <!-- ad end -->
+
+        <hr style="clear:both;" />
+
         <!-- footer start -->
         
         <footer>
-            <a href="http://sunstripe.main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
             <div style="clear:both;text-align:center;">
                 
                 &copy; 2011 - <script>
@@ -102,6 +169,6 @@
         
         <!-- footer end -->
         
-
+        
     </body>
 </html>

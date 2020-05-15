@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja" target="_blank">
+    <head>
+        <meta charset="UTF-8" />
+        <title>素敵曜日 - Git Master - プル（pull）</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+        <style>
+            </style>
+    </head>
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+         
+         ga('create', 'UA-89124000-1', 'auto');
+         ga('send', 'pageview');
+         
+        </script>
+    
+    <script>
+            function openURL(url) {
+                ga('send', 'event', {
+                   eventCategory: document.title + url,
+                   eventAction: 'click',
+                   eventLabel: document.title + ' : open : ' + url
+                   });
+                   window.open(url, '_blank'); // 新しいタブを開き、ページを表示
+            }
+        </script>
+        
+    <body>
+        <header>
+            <!-- nav start -->
+            
+            <nav class="mainMenuList">
+                <menu>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe-main.jp/">HOME</a></li>
+                    <li class="mainMenuList"><a class="mainMenu" href="http://sunstripe.main.jp/GitMaster/">素敵曜日 - Git Master</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./basic.html">basic</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./expansion.html">expansion</a></li>
+                    <li class="mainMenuList"><a class="mainMenu selected" href="./reference.html">reference</a></li>
+                </menu>
+            </nav>
+            
+            <!-- nav end -->
+            
+            <!-- menu start -->
+            
+            <menu id="menu">
+                <a class="button" href="./index.html">GitMaster</a>
+                <a class="button" href="./basic.html">基礎編</a>
+                <a class="subbutton" href="./basicStart.html">Gitの基本 - はじめに</a>
+                <a class="subbutton" href="./repository.html">リポジトリ</a>
+                <a class="subbutton" href="./tag.html">タグ</a>
+                <a class="subbutton active" href="./commit.html">コミット</a>
+                <br />
+            </menu>
+            
+            <!-- menu end -->
+            <h1 id="header_title">プル - pull</h1>
+            <p id="header_description">
+                ここでは、Gitにおいての基礎、pull（プル）のことを紹介していきます。
+            </p>
+        
+        </header>
+        
+        <hr />
+        
+        <!-- contents start -->
+        <main id="contents">
+        
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">基礎編</a>
+
+        <h3>プル</h3>
+        <a href="./pull.html#basic" alt="checkout" title="プル"><h2>pull</h2></a>
+        
+        <!-- subtitle basic end -->
+        
+        <hr />
+        
+        <!-- contents start -->
+        
+        <section id="basic">
+                <h1>basic（基礎編）</h1>
+                <article>
+                    <!-- 基礎編 - 説明// -->
+                    <h2>リポジトリの共有</h2>
+                    <h2>リモートリポジトリからプルする</h2>
+                    <p>
+                            リモートリポジトリを共有して複数人で作業すると、みんながリモートリポジトリにプッシュしていきます。すると、自分のローカルリポジトリに、ほかの人がプッシュした変更内容を取り込む必要があります。
+                    </p>
+                </article>
+                <article>
+                    <h2>Pull</h2>
+                    <p>
+                        リモートリポジトリからローカルリポジトリを更新するにはプル(Pull)という操作を行います。
+                        <br />
+                        Pullを実行すると、リモートリポジトリから最新の変更履歴をダウンロードしてきて、自分のローカルリポジトリにその内容を取り込みます。
+                    </p>
+                </article>
+
+<!--  code など start -->
+                <article>
+<pre class="code">
+$ git pull 
+</pre>
+                </article>
+
+                <article>
+                    <p>
+                    という形式でコマンドを書きます。
+                    </p>
+                </article>
+
+                <article class="comment">
+                    <p>
+                        次からチュートリアル
+                        <br />
+                        Backlogのリモートリポジトリを使ってリポジトリを共有してみてね
+                    </p>
+                </article>
+<!--  code など end -->
+        </section>
+<!-- basic（基礎編） end // -->
+
+<!-- repository（共有編） start // -->
+
+        <!-- repository page nav start -->
+        <nav id="repository page nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./worktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+        <!-- repository page nav end -->
+
+<!-- repository（共有編） end // -->
+
+        <!-- subtitle basic start-->
+        
+        <a name="basic" class="tagbutton" href="./basic.html">repository編</a>
+
+        <h3>プル</h3>
+        <a href="./pull.html#basic" alt="checkout" title="プル"><h2>pull</h2></a>
+        
+        <!-- subtitle basic end -->
+        
+        <hr />
+        
+        <!-- contents start -->
+        
+        <section id="basic">
+                <h1>basic（基礎編）</h1>
+                <article>
+                    <!-- 基礎編 - 説明// -->
+                    <h2>リポジトリの共有</h2>
+                    <h2>リモートリポジトリからプルする</h2>
+                    <p>
+                            リモートリポジトリを共有して複数人で作業すると、みんながリモートリポジトリにプッシュしていきます。すると、自分のローカルリポジトリに、ほかの人がプッシュした変更内容を取り込む必要があります。
+                    </p>
+                </article>
+                <article>
+                    <h2>Pull</h2>
+                    <p>
+                        リモートリポジトリからローカルリポジトリを更新するにはプル(Pull)という操作を行います。
+                        <br />
+                        Pullを実行すると、リモートリポジトリから最新の変更履歴をダウンロードしてきて、自分のローカルリポジトリにその内容を取り込みます。
+                    </p>
+                </article>
+
+<!--  code など start -->
+                <article>
+<pre class="code">
+$ git pull 
+</pre>
+                </article>
+
+                <article>
+                    <p>
+                    という形式でコマンドを書きます。
+                    </p>
+                </article>
+
+                <article class="comment">
+                    <p>
+                        次からチュートリアル
+                        <br />
+                        Backlogのリモートリポジトリを使ってリポジトリを共有してみてね
+                    </p>
+                </article>
+<!--  code など end -->
+        </section>
+<!-- basic（基礎編） end // -->
+
+<!-- repository（共有編） start // -->
+
+        <!-- repository page nav start -->
+        <nav id="repository page nav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./worktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+        <!-- repository page nav end -->
+
+<!-- repository（共有編） end // -->
+
+
+        リモートリポジトリにプッシュする
+        「チュートリアル Gitの基本」で作成したローカルリポジトリ「tutorial」をプッシュしましょう。
+        
+        お使いのパソコンの環境を選んでください。
+        
+        コンソール
+        リモートリポジトリにローカルリポジトリの履歴をpushしましょう
+        
+        リモートリポジトリのアドレスは名前を付けて記録しておくことができます。記録しておくと、pushするときには毎回長いリモートリポジトリのアドレスを入力する必要がなくなります。
+        まずは「origin」という名前でリモートリポジトリを登録してからpushを行います。
+        
+        リモートリポジトリを追加するには、remoteコマンドを使用します。<name>は登録名、<url>はリモートリポジトリのURLを指定します。
+        
+        $ git remote add <name> <url>
+        次のコマンドを実行して、前のページで作成したリモートリポジトリのURLをoriginという名前で登録します。
+        
+        
+        
+        $ git remote add origin
+        https://[your_space_id].backlog.jp/git/[your_project_key]/tutorial.git
+        プッシュやプルは実行時にリモートリポジトリ名を省略すると、originという名前のリモートリポジトリを使用します。そのため、リモートリポジトリにはoriginという名前を付けるのが一般的です。
+        リポジトリをプッシュするには、pushコマンドを使用します。<repository>はプッシュ先のアドレス、<refspec>はプッシュするブランチを指定します。ブランチについては発展編で詳しく説明します。
+        
+        $ git push <repository> <refspec>...
+        次のコマンドを実行してリモートリポジトリoriginにコミットをpushします。実行オプションで-uを指定すると、次回以降はそのブランチ名の指定を省略できます。ただし、一番最初、空のリモートリポジトリにpushするときはリモートリポジトリ名やブランチ名を省略できません。
+        
+        途中でユーザ名とパスワードを求められるので、Backlogのユーザ名とパスワードを入力してください。
+        
+        $ git push -u origin master
+        Username: <ユーザ名>
+        Password: <パスワード>
+        Counting objects: 3, done.
+        Writing objects: 100% (3/3), 245 bytes, done.
+        Total 3 (delta 0), reused 0 (delta 0)
+        To https://nulab.backlog.jp/git/BLG/tutorial.git
+         * [new branch]      master -> master
+        BacklogのGitのページを開いてください。最近の更新にプッシュの項目が追加されています。
+        
+        
+        
+        リポジトリのファイル一覧には、pushしたリポジトリのファイルが追加されました。
+        
+        
+        
+        次はこのリモートリポジトリばクローンするばい！
+        
+        サルのダイミョー
+        
+
+<!-- expansion（応用編） start // 
+<section id="expantion">
+<h1>expansion（応用編）</h1>
+        
+<article>
+    <h2>応用編 - 概要</h2>
+        <p>
+            応用編 - 説明
+        </p>
+</article>
+</section>
+!-- expansion（応用編） end // -->
+        </main>
+        <!-- contents end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- ad start -->
+        
+        <div id="ad">
+            <!-- 広告枠 //-->
+        </div>
+        
+        <!-- ad end -->
+        
+        <!-- page nav start -->
+        <!-- TODO: チュートリアル機能がある場合 -->
+        <nav id="pagenav" style="width:80%">
+        
+                <span><a class="prevbutton" href="./repository.html">「基礎編 - 履歴を管理するリポジトリ」に戻る </a></span>
+                
+                <span><a class="subbutton" href="./commit.html">「基礎編 - 変更を記録するコミット」</a></span>
+                        
+                <span><a class="nextbutton" href="./worktree.html">「基礎編 - ワークツリーとインデックス」に進む </a></span>
+                        
+        </nav>
+
+        <!-- page nav end -->
+        
+        <!-- page start -->
+        
+        <menu id="page">
+            <span><a class="smallbutton" href="./index.html">Git Master</a></span>
+            <span><a class="smallbutton" href="./basic.html">basic</a></span>
+            <span><a class="smallbutton" href="./basicStart.html">Gitの基本</a></span> 
+            <span><a class="smallbutton" href="./expansion.html">expansion</a></span>
+            <span><a class="smallbutton" href="./reference.html">reference</a></span>
+        </menu>
+        
+        <!-- page end -->
+        
+        <hr style="clear:both;"/>
+        
+        <!-- footer start -->
+        
+        <footer>
+            <a href="http://sunstripe-main.jp/">HOME</a> > 素敵曜日 - <a href="./index.html">GitMaster</a> > <a href="./basic.html">基礎編</a> > <a href="./expansion.html">応用編</a> > <a href="./reference.html">リファレンス</a>
+            <div style="clear:both;text-align:center;">
+                
+                &copy; 2011 - <script>
+                    var newDate = new Date();
+                    //年・月・日・曜日を取得する
+                    var year = newDate.getFullYear();
+                    document.write(year);
+                    </script> Team Sun Stripe
+            </div>
+        </footer>
+        
+        <!-- footer end -->
+        
+    </body>
+</html>
